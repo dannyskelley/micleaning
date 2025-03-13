@@ -1,6 +1,7 @@
 <!-- ============================================ -->
 <!--                 Navigation                   -->
 <!-- ============================================ -->
+ 
 <style>
     /*-- -------------------------- -->
 <---     Mobile Navigation      -->
@@ -29,7 +30,7 @@
             width: 49.1875rem;
            
            
-            max-width: 15rem;
+            max-width: 25rem;
         
             padding: 0;
             display: flex;
@@ -54,15 +55,16 @@
         content: "";
         width: 0%;
         height: 100%;
-        background:var(--headerScroll);
+       
     }
+    #cs-navigation {background-color: white;} 
 
     button {
         background-color: transparent;
         border: 0px;
     }
 
-    body.scroll #cs-navigation .cs-logo {max-width: 100px;}
+    body.scroll #cs-navigation .cs-logo {max-width: 200px;}
 
     
     /* Mobile - 1023px */
@@ -76,6 +78,7 @@
             text-align: center;
             background-color: var(--callBg);
             padding-bottom:180px;
+          
         }
 
      
@@ -393,7 +396,7 @@
         }
 
         #cs-navigation .cs-li-link.cs-active {
-            color: var(--secondary);
+            color: var(--primary);
         }
 
         #cs-navigation .cs-li-link.cs-active:before {
@@ -427,8 +430,8 @@
             height: auto;
             opacity: 1;
             visibility: visible;
-            margin: 0.75rem 0 0 0;
-            padding: 0.75rem 0 0px;
+            margin:0px;
+            padding: 0px;
         }
 
         #cs-navigation .cs-dropdown.cs-active .cs-drop-link {
@@ -696,7 +699,7 @@
             justify-content: center;
             align-items: center;
             z-index: 100;
-            
+           
             overflow: hidden;
         }
 
@@ -738,9 +741,9 @@
             font-size: clamp(0.875rem, 0.6vw, 1rem);
             line-height: 1.5em;
             font-family: "Poppins", Arial, sans-serif;
-            text-decoration: none;
+            text-transform: uppercase;
             margin: 0;
-            color: var(--bodyTextColorWhite);
+            color: #333;
             display: block;
             position: relative;
             transition: color 0.3s;
@@ -760,7 +763,7 @@
         }
 
         #cs-navigation .cs-li-link:hover {
-            color: var(--secondary);
+            color:black;
         }
 
         #cs-navigation .cs-li-link:hover:before {
@@ -786,8 +789,8 @@
 
             min-width: 9.375rem;
             padding: 0 2rem;
-            background-color: var(--primary);
-            display: inline-block;
+         
+           
             position: relative;
             z-index: 1;
             /* prevents padding from adding to the width */
@@ -800,12 +803,120 @@
             line-height: 2.875rem;
         }
     }
+
+
+    /*-- -------------------------- -->
+<---    Tertiary Navigation     -->
+<--- -------------------------- -*/
+
+/* Mobile - 1023px */
+@media only screen and (max-width: 1023px) {
+  #cs-navigation .cs-dropdown.cs-active .cs-drop-ul {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    margin:0px;
+    height: auto;
+    padding: 0px;
+  }
+  #cs-navigation .cs-dropdown.cs-active .cs-drop-link {
+    opacity: 1;
+  }
+  #cs-navigation .cs-dropdown.cs-active .cs-dropdown-toggle {
+    pointer-events: none;
+  }
+  #cs-navigation .cs-dropdown-toggle {
+    pointer-events: none;
+  }
+  #cs-navigation .cs-drop-ul {
+ width: 100%;
+    box-sizing: border-box;
+  }
+  #cs-navigation .cs-drop3 {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    transition: padding 0.3s, margin 0.3s, height 0.3s, opacity 0.3s, transform 0.3s, visibility 0.3s;
+    gap: 0.5rem;
+    transform-origin: top;
+  }
+  #cs-navigation .cs-drop-li {
+    width: 100%;
+    border-bottom:1px solid white;
+    padding-right: 30px;
+  }
+  #cs-navigation .cs-drop-li.drop3-active .cs-drop3 {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    height: auto;
+    padding: 1rem;
+    margin-bottom: 10px;
+  }
+  #cs-navigation .cs-drop-li.drop3-active .cs-drop3-main {
+    margin-bottom: 0.75rem;
+  }
+  #cs-navigation .cs-drop3-main {
+    font-weight: bold;
+    transition: margin 0.3s;
+  }
+  #cs-navigation .cs-drop3-main .cs-drop-icon {
+    filter: grayscale(1) brightness(1000%);
+  }
+  #cs-navigation .cs-drop-li3 {
+    list-style: none;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 1024px) {
+  #cs-navigation .cs-drop-ul {
+    overflow: visible;
+  }
+  #cs-navigation .cs-drop-li {
+    z-index: 1;
+    position: relative;
+  }
+  #cs-navigation .cs-drop-li:hover .cs-drop3 {
+    display: block;
+  }
+  #cs-navigation .cs-drop3 {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: none;
+    background-color: #fff;
+    min-width: 12.5rem;
+    padding: 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  #cs-navigation .cs-drop3-main:hover .cs-drop-icon {
+    transform: rotate(-90deg);
+  }
+  #cs-navigation .cs-drop-icon {
+    transition: transform 0.3s;
+  }
+  #cs-navigation .cs-drop-li3 {
+    list-style: none;
+  }
+}
+                                
 </style>
 <header id="cs-navigation">
     <div class="cs-container">
         <!--Nav Logo-->
         <a href="/" class="cs-logo" aria-label="back to home">
-            <img src="/assets/images/logo.svg" alt="logo" width="197"
+            <img src="/assets/images/logo.jpg" alt="logo" width="197"
                 height="43" aria-hidden="true" decoding="async">
         </a>
         <!--Navigation List-->
@@ -821,70 +932,101 @@
             <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
             <div class="cs-ul-wrapper">
                 <ul id="cs-expanded" class="cs-ul">
-                    {% set navPages = collections.all | eleventyNavigation %}
-
-                    {# Loop through all pages with a eleventyNavigation in the frontmatter #}
-                    {% for entry in navPages %}
-
-                    {# Define a hasChild variable to make it easier to test what navigation items are have child
-                    dropdown pages #}
-                    {% set hasChild = entry.children.length %}
-
-                    {# Check the frontmatter for hideOnMobile/hideOnDesktop. Form a list of classes to be joined when
-                    the item is rendered #}
-                    {% set hideClasses = [] %}
-                    {% if entry.hideOnMobile %}
-                    {% set hideClasses = (hideClasses.push("cs-hide-on-mobile"), hideClasses) %}
-                    {% endif %}
-                    {% if entry.hideOnDesktop %}
-                    {% set hideClasses = (hideClasses.push("cs-hide-on-desktop"), hideClasses) %}
-                    {% endif %}
-
-                    {# If this page is a dropdown, give it the appropriate classes, icons and accessibility attributes
-                    #}
-                    <li class="cs-li {% if hasChild %} cs-dropdown {% endif %} {{ hideClasses | join(" ") }}">
-
-                        {# If the page has child dropdown pages, render it as a <button> tag with the appropriate
-                            dropdown HTML #}
-                            {% if hasChild %}
-
-                            {# Check to see if the user's current page is one of the child pages. If so, apply the
-                            cs-active class to the dropdown parent #}
-                            {% set activeClass = "" %}
-                            {% for child in entry.children %}
-                            {% if child.url == page.url %}
-                            {% set activeClass = "cs-active" %}
-                            {% endif %}
-                            {% endfor %}
-
-                            {# Render the <button> with the active class, dropdown icon and child links #}
-                                <button class="cs-li-link cs-dropdown-button {{ activeClass }}" aria-expanded="false"
-                                    aria-controls="dropdown-{{ entry.key }}" aria-label="dropdown-{{ entry.key }}">
-                                    {{ entry.key }}
-                                    <img class="cs-drop-icon" style="filter: brightness(0) invert(1);"
-                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg"
-                                        alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
-                                </button>
-
-                                {# Dropdowns have another ul/li set up within the parent li, which gets rendered in the
-                                same way as a normal link #}
-                                <ul class="cs-drop-ul" id="dropdown-{{ entry.key }}">
-                                    {% for child in entry.children %}
-                                    <li class="cs-drop-li">
-                                        <a href="{{ child.url }}" class="cs-li-link cs-drop-link">{{ child.key }}</a>
-                                    </li>
-                                    {% endfor %}
-                                </ul>
-                                {% else %}
-                                {# Normal pages are rendered as <a> tags, in the normal way you'd expect #}
-                                    <a href="{{ entry.url }}"
-                                        class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}" {% if
-                                        entry.url==page.url %} aria-current="page" {% endif %}>
-                                        {{ entry.key }}
-                                    </a>
-                                    {% endif %}
+                    <li class="cs-li">
+                        <a href="/" class="cs-li-link {{ 'cs-active' if '/' == page.url }}">
+                            Home
+                        </a>
                     </li>
-                    {% endfor %}
+                    <li class="cs-li">
+                        <a href="/about" class="cs-li-link {{ 'cs-active' if 'about' == page.fileSlug }}">
+                            About
+                        </a>
+                    </li>
+                    <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+                    <li class="cs-li cs-dropdown" tabindex="0">
+                        <span class="cs-li-link {{ 'cs-active' if 'services' == page.fileSlug }} cs-dropdown-toggle">
+                            Services
+                            <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                        </span>
+                        <ul class="cs-drop-ul">
+                            <a href="/services" class="cs-li-link cs-drop-link">
+                               View All Services
+                            </a>
+                            <li class="cs-drop-li cs-drop3-main">
+                                <span class="cs-li-link cs-drop-link ">
+                                    Commercial Services
+                                    <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                                </span>
+                                <!--Tertiary-->
+                                <ul class="cs-drop3">
+                                    <li class="cs-drop-li3">
+                                        <a href="/services/#tenant-office-renovations" class="cs-li-link cs-drop-link cs-drop-link3">Tenant Office Renovations</a>
+                                    </li>
+                                    <li class="cs-drop-li3">
+                                        <a href="/services/#commercial-remodeling" class="cs-li-link cs-drop-link cs-drop-link3">Commercial Remodeling</a>
+                                    </li>
+                                    <li class="cs-drop-li3">
+                                        <a href="/services/#commercial-design-build" class="cs-li-link cs-drop-link cs-drop-link3">New Commercial Design Build</a>
+                                    </li>
+                                    <li class="cs-drop-li3">
+                                        <a href="/services/#building-maintenance-and-property-management-services" class="cs-li-link cs-drop-link cs-drop-link3">Building Maintenance</a>
+                                    </li>
+                        
+
+                                    <li class="cs-drop-li3">
+                                        <a href="/services/#mobile-welding-services" class="cs-li-link cs-drop-link cs-drop-link3">Mobile Welding Services</a>
+                                    </li>
+                        
+                                </ul>
+                            </li>
+                            <li class="cs-drop-li cs-drop3-main">
+                                <span class="cs-li-link cs-drop-link">
+                                    Industrial Services
+                                    <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                                </span>
+                                <!--Tertiary-->
+                                <ul class="cs-drop3">
+                                    <li class="cs-drop-li3">
+                                        <a href="/services/#industrial-design-build" class="cs-li-link cs-drop-link cs-drop-link3">Industrial Design Build</a>
+                                    </li>
+                                 
+                                </ul>
+                            </li>
+                            <li class="cs-drop-li cs-drop3-main">
+                                <span class="cs-li-link cs-drop-link">
+                                    Residential Services
+                                    <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                                </span>
+                                <!--Tertiary-->
+                                <ul class="cs-drop3">
+                                    <li class="cs-drop-li3">
+                                        <a href="/services/#tile-and-paint" class="cs-li-link cs-drop-link cs-drop-link3">Tile & Paint</a>
+                                    </li>
+                                    <li class="cs-drop-li3">
+                                        <a href="/services/#electrical-upgrades-and-light-plumbing" class="cs-li-link cs-drop-link cs-drop-link3">Electrical Upgrades & Light Plumbing</a>
+                                    </li>
+                                    <li class="cs-drop-li3">
+                                        <a href="/services/#concrete-staircase-wood-graining" class="cs-li-link cs-drop-link cs-drop-link3">Concrete Staircase Wood Graining</a>
+                                    </li>
+                                    <li class="cs-drop-li3">
+                                        <a href="/services/#vinyl-cabinet-wrapping-and-wallpaper-installation" class="cs-li-link cs-drop-link cs-drop-link3">Vinyl Cabinet Wrapping &<BR> Wallpaper Installation</a>
+                                    </li>
+                   
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/photos" class="cs-li-link {{ 'cs-active' if 'photos' == page.fileSlug }}">
+                            Photos
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/contact" class="cs-li-link {{ 'cs-active' if 'contact' == page.fileSlug }}">
+                           Contact 
+                        </a>
+                    </li>
+                                
                 </ul>
                 <div class="cs-call">
 
@@ -896,7 +1038,10 @@
                 </div>
             </div>
         </nav>
-        <a href="" class="cs-button-solid cs-nav-button">Get A Quote</a>
+        <a href="/contact" class="cs-button-10 cs-button-solid cs-nav-button" aria-label="read more about us">
+            Get a Free Quote
+     
+            </a>
         <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
         <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
             <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
@@ -904,3 +1049,43 @@
         </button> -->
     </div>
 </header>
+
+<script>
+
+// Select all tertiary dropdown elements
+const tertiaryDrop = Array.from(document.querySelectorAll('#cs-navigation .cs-drop3-main'));
+
+// Select all anchor links within the navigation
+const anchorLinks = Array.from(document.querySelectorAll('#cs-navigation a[href*="#"]'));
+
+// Handle tertiary dropdown toggles
+for (const item of tertiaryDrop) {
+    item.addEventListener('click', (e) => {
+        e.stopPropagation();
+        item.classList.toggle('drop3-active');
+    });
+}
+
+// Handle anchor link clicks
+for (const link of anchorLinks) {
+    link.addEventListener('click', () => {
+        // Find the parent dropdown if it exists
+        const parentDropdown = link.closest('.cs-drop3-main');
+        if (parentDropdown) {
+            parentDropdown.classList.remove('drop3-active');
+        }
+        
+        // Close any other open dropdowns
+        tertiaryDrop.forEach(dropdown => {
+            dropdown.classList.remove('drop3-active');
+        });
+        
+        // If there's a mobile menu element, close it
+        const mobileMenu = document.querySelector('.cs-active'); // Adjust selector as needed
+        if (mobileMenu) {
+            mobileMenu.classList.remove('cs-active');
+        }
+    });
+}
+                                
+</script>
