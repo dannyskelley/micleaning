@@ -1,397 +1,272 @@
 <!-- ============================================ -->
-<!--                    Hero                      -->
+<!--                   Gallery                    -->
 <!-- ============================================ -->
 
-<style>
-  /*-- -------------------------- -->
-<---           Hero             -->
-<--- -------------------------- -*/
+<section id="gallery-2235">
+  <div class="cs-container">
+      <div class="cs-content">
+          <div class="cs-flex-group">
+              <span class="cs-topper">Chesaning Inn & Suites</span>
+              <h2 class="cs-title">Sleep Easy. Stay Happy.</h2>
+          </div>
+
+          <div class="cs-text">
+            <p>Located in the heart of Chesaning, MI our family owned hotel has been welcoming guests for over 20 years. We offer free WiFi, complimentary breakfast, & pet friendly rooms. We also offer fireplace or Jacuzzi rooms, & affordable rates for weekly stays!</p>              </div>
+        
+      </div>
+                
+      {% include 'components/cta_button.html' %}
+
+      <div class="cs-wrapper">
+          <div class="cs-slideshow">
+              <!-- Ensure that the the cs-slide you want to start on has the 'initial' class applied. The JS will take care of the rest -->
+              <picture class="cs-slide initial">
+                  <source media="(max-width: 600px)" srcset="/assets/images/slider1.jpg">
+                  <source media="(min-width: 601px)" srcset="/assets/images/slider1.jpg">
+                  <img loading="lazy" decoding="async" src="/assets/images/slider1.jpg" alt="formal dinner" width="380" height="271">
+              </picture>
+              <picture class="cs-slide">
+                  <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding7.jpg">
+                  <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding7.jpg">
+                  <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding7.jpg" alt="formal dinner" width="380" height="271">
+              </picture>
+              <picture class="cs-slide">
+                  <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding10.jpg">
+                  <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding10.jpg">
+                  <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding10.jpg" alt="formal dinner" width="380" height="271">
+              </picture>
+
+              <div class="cs-slideshow-button cs-slideshow-next"></div>
+              <div class="cs-slideshow-button cs-slideshow-prev"></div>
+          </div>
+      </div>
+
+      
+  </div>
+</section>
+                              
+<Style>
+  /* ---------------------------------- */
+/*           Gallery                  */
+/* ---------------------------------- */
 
 /* Mobile - 360px */
-#hero-2219 .cs-title {max-width: 900px;}
-
 @media only screen and (min-width: 0rem) {
-
-
-  #hero-2219 .cs-image-group {
-    /* scales the whole group based on the view width size and stop when that vales equals .74em, resets at desktop */
-    font-size: min(2.32vw, .74em);
-    width: 39.375em;
-    height: 40.9375em;
-    display: block;
-    position: relative;
-    z-index: 1;
-    display: none;
+  #gallery-2235 {
+    padding: var(--sectionPadding);
+    background-color: #e1efff;
   }
-
-  #hero-2219 .cs-picture {
-    position: absolute;
-  }
-  #hero-2219 .cs-picture img {
+  #gallery-2235 .cs-container {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  #hero-2219 .cs-picture1 {
-    width: 19.0625em;
-    height: auto;
-    border: 4px solid #FFFFFF;
-    top: 0;
-    bottom: 17.5625em;
-    left: 0;
-  }
-  #hero-2219 .cs-picture2 {
-    width: 25.8125em;
-    height: auto;
-    border: 4px solid #FFFFFF;
-    top: 16.9375em;
-    right: 0;
-    bottom: 0;
-  }
-  #hero-2219 .cs-picture3 {
-    width: 13.625em;
-    height: 9.6875em;
-    top: 5.25em;
-    right: 4.6875em;
-    border: 4px solid #FFFFFF;
-  }
-
-  #hero-2219 .cs-graphic {
-    width: 101%;
-   
-    height: auto;
-    object-fit: cover;
-    position: absolute;
-    bottom: -1px;
-    left: 50%;
-    z-index: 2;
-    transform: translateX(-50%);
-  }
-  #hero-2219 {
-    background-color: #000;
-    overflow: hidden;
-    position: relative;
-    z-index: 998;
-    
-  }
-  #hero-2219 .cs-container {
-    width: 100%;
-    
+    max-width: 120rem;
     margin: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     /* 48px - 64px */
-    gap: clamp(3rem, 7vw, 4rem);
-    position: relative;
+    gap: clamp(3rem, 6vw, 4rem);
   }
-  #hero-2219 .cs-content {
-    /* top changes to 100px on tablet */
-    /* bottom 60px - 180px */
-    padding: 1.5rem 2rem clamp(3.75rem, 12vw, 11.25rem);
-    padding-top: 130px;
-    box-sizing: border-box;
+  #gallery-2235 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 80rem;
     display: flex;
     flex-direction: column;
-    z-index: 99;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
   }
-  #hero-2219 .cs-author {
+  #gallery-2235 .cs-flex-group {
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    /* prevents flexbox from squishing it */
+    flex: none;
   }
-  #hero-2219 .cs-name {
-    font-size: 1.5625rem;
-    font-weight: 700;
-    line-height: 1.2em;
-    color: var(--bodyTextColorWhite);
-    display: block;
+  #gallery-2235 .cs-topper {
+    color: var(--secondary);
   }
-  #hero-2219 .cs-job {
-    font-size: 1rem;
-    line-height: 1.2em;
-    margin: 0 0 1rem;
-    color: var(--bodyTextColorWhite);
-    display: block;
+  #gallery-2235 .cs-text {
+    max-width: none;
   }
-  #hero-2219 .cs-title {
-    /* 49px - 61px */
-    font-size: clamp(3.0625rem, 6vw, 3.8125rem);
-
-    color: var(--bodyTextColorWhite);
-  }
-  #hero-2219 .cs-text {
-    /* 16px - 20px */
-    font-size: clamp(1.2rem, 2vw, 1.25rem);
-
-    color: var(--bodyTextColorWhite);
-  }
-  #hero-2219 .cs-video-group {
+  #gallery-2235 .cs-wrapper {
     width: 100%;
-    /* 180px - 320px */
-    height: clamp(11.25rem, 40vw, 20rem);
-    /* 48px - 80px */
-    margin-top: clamp(3rem, 11vw, 5rem);
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
-  }
-  #hero-2219 .cs-video-group:hover {
-    cursor: pointer;
-  }
-  #hero-2219 .cs-video-group:hover .cs-play {
-    transform: translateY(-50%) scale(1.1);
-  }
-  #hero-2219 .cs-video-group video,
-  #hero-2219 .cs-video-group .cs-picture {
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-  #hero-2219 .cs-video-group video img,
-  #hero-2219 .cs-video-group .cs-picture img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  #hero-2219 .cs-wrapper {
-    width: 88%;
-    position: relative;
-    z-index: 1;
-  }
-  #hero-2219 .cs-play {
-    /* 80px - 120px */
-    width: clamp(5rem, 10vw, 7.5rem);
-    height: auto;
-    padding: 0;
-    background-color: transparent;
-    border: none;
-    pointer-events: none;
-    position: absolute;
-    top: 50%;
-    left: calc(clamp(5rem, 10vw, 7.5rem)*-0.5);
-    transform: translateY(-50%);
-    transform-origin: center;
-    transition: transform 0.3s, opacity 0.3s;
-  }
-  #hero-2219 .cs-play:hover {
-    cursor: pointer;
-  }
-  #hero-2219 .cs-play.cs-hide {
-    opacity: 0;
-    transform: translateY(-50%) scale(0);
-  }
-  #hero-2219 .cs-play img {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
     overflow: hidden;
   }
-  #hero-2219 .cs-background {
+  #gallery-2235 .cs-slideshow {
+    position: relative;
+    transform-style: preserve-3d;
+  }
+  #gallery-2235 .cs-slide {
     width: 100%;
-    height: 99vh;
-    min-height: 750px;
+    /* 340px - 840px */
+    height: clamp(21.25rem, 60vw, 52.5rem);
+
+    margin: auto;
+    opacity: 0;
+    display: block;
     position: absolute;
     top: 0;
-    left: 0;
-    z-index: 1;
-    background-color: black;
+    z-index: 100;
+    transition: transform 0.3s, opacity 0.3s, z-index 0.3s;
+    /* classes applied by the JS file */
   }
-  #hero-2219 .cs-background img {
-    width:auto;
-  
-   min-height: 790px;
+  #gallery-2235 .cs-slide img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    margin:0px 0px 0px 0px;
-    opacity: .5;
   }
-  #hero-2219 .cs-background::before {
-    content: "";
-    width: 100%;
-    height: 95vh;
-    background: linear-gradient(0deg, #000 20%, rgba(0,0, 0, 0.00) 58.94%, rgba(0, 0, 0, .05) 96.68%);
-opacity: .0;
+  #gallery-2235 .cs-slide.initial,
+  #gallery-2235 .cs-slide.active {
+    opacity: 1;
+    position: relative;
+    z-index: 900;
+  }
+  #gallery-2235 .cs-slide.prev,
+  #gallery-2235 .cs-slide.next {
+    z-index: 800;
+  }
+  #gallery-2235 .cs-slide.prev {
+    transform: translateX(-100%);
+  }
+  #gallery-2235 .cs-slide.next {
+    transform: translateX(100%);
+  }
+  #gallery-2235 .cs-slideshow-button {
+    /* 36px - 80px */
+    width: clamp(2.25rem, 6vw, 5rem);
+    /* 36px - 80px */
+    height: clamp(2.25rem, 6vw, 5rem);
+    cursor: pointer;
+    border: 1px solid #fff;
+    border-radius: 50%;
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 9999;
+    top: 50%;
+    z-index: 1000;
+    transform: translateY(-50%);
+  }
+  #gallery-2235 .cs-slideshow-button::before {
+    content: "";
+    /* 20px - 64px */
+    width: clamp(1.25rem, 5vw, 4rem);
+    /* 20px - 64px */
+    height: clamp(1.25rem, 5vw, 4rem);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #gallery-2235 .cs-slideshow-button.cs-slideshow-prev {
+    left: 1rem;
+  }
+  #gallery-2235 .cs-slideshow-button.cs-slideshow-prev::before {
+    background-image: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/slideshow-left.svg");
+  }
+  #gallery-2235 .cs-slideshow-button.cs-slideshow-next {
+    right: 1rem;
+  }
+  #gallery-2235 .cs-slideshow-button.cs-slideshow-next::before {
+    background-image: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/slideshow-right.svg");
   }
 }
-
-
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #hero-2219 .cs-number {text-align: center;}
-
-  #hero-2219 .cs-background img {
-    width:auto;
-   height: 100vh;
-   min-height: 870px;
-    object-fit: cover;
-    margin:0px 0px 0px calc(50% - 750px);
+  #gallery-2235 .cs-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2.5rem;
   }
-  #hero-2219 .cs-content {
-    text-align: left;
- 
-    padding-top: 9.25rem;
-    align-items: flex-start;
-    min-height: 500px;
-    margin: 0px;
-    padding-top: 200px;
+  #gallery-2235 .cs-title {
+    margin-bottom: 0;
   }
-
-  #hero-2219 .cs-author {
-    position: absolute;
-    /* 60px - 120px */
-    bottom: clamp(3.75rem, 12vw, 7.5rem);
-    left: 7.5rem;
+  #gallery-2235 .cs-flex-group {
+    width: 55%;
   }
-  #hero-2219 .cs-job {
-    margin: 0;
-  }
-}
-  @media only screen and (min-width: 780px) {
-  #hero-2219 .cs-background img {
-    width:auto;
-   height: 100vh;
-   min-height: 870px;
-    object-fit: cover;
-    margin:0px 0px 0px calc(50% - 500px);
-  }
-
-  
-
-}
-/* Large Desktop - 1300px */
-@media only screen and (min-width: 60.25rem) {
-  #hero-2219 .cs-image-group {
-position: absolute;
-right: 0px;
-    display: block;
-  }
-  #hero-2219 .cs-graphic {
-    width: 100%;
-   
-    height: auto;
-    object-fit: cover;
-    position: absolute;
-    bottom: -1px;
-    left: 50%;
-    z-index: 2;
-    transform: translateX(-50%);
-  }
-  #hero-2219 .cs-content {
-  width: 99%;
-    box-sizing: content-box;
-    /* 16px - 170px */
-    margin: 0px 0px;
-    padding-top: 130px;
-    max-width: 900px;
-    
-  }
-  #hero-2219 {height: 85vh;}
-  #hero-2219 .cs-background {height: 85vh; min-height: 200px; overflow: hidden;}
-  #hero-2219 .cs-background img {
-    width:100%;
-   height: 110vh;
-   min-height: 930px;
-    object-fit: cover;
-    object-position: top;
-    margin:0px 0px 0px 0px;
-  }
-
-}
-
-@media only screen and (min-width:1400px) {
-  #hero-2219 .cs-image-group {
-
-right: 5%;
-
-  }
- #hero-2219 .cs-graphic {
-   width: 100%;
-  
-   height: auto;
-   object-fit: cover;
-   position: absolute;
-   bottom: -1px;
-   left: 50%;
-   z-index: 2;
-   transform: translateX(-50%);
- }
- #hero-2219 .cs-content {
- width: 80%;
-   box-sizing: content-box;
-   /* 16px - 170px */
-   margin: 0px auto;
-   padding-top: 150px;
-   max-width: 1200px;
-   
- }
 }
                                 
-</style>
-
-<section id="hero-2219">
-  <svg class="cs-graphic cs-graphic-light" width="1920" height="188" viewBox="0 0 1920 188" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M1920 45.8671C1835.33 45.8671 1715.47 60.6671 1549.2 104.534C1115.6 218.4 932.267 0.000366211 466.533 0.000366211C218.933 0.000366211 172.8 45.8671 0.133333 45.8671L0 187.934H1920V45.8671Z" fill="#fff"></path>
-  </svg>
-  <div class="cs-container">
-      <div class="cs-content">
-        <div class="cs-image-group">
-          <!--Top left image-->
-          <picture class="cs-picture cs-picture1">
-              <!--Mobile Image-->
-              <source media="(max-width: 600px)" srcset="/assets/images/1.jpg">
-              <!--Tablet and above Image-->
-              <source media="(min-width: 601px)" srcset="/assets/images/1.jpg">
-              <img decoding="async" src="/assets/images/1.jpg" alt="wedding photoshoot" width="297" height="366">
-          </picture>
-          <!--Bottom right image-->
-          <picture class="cs-picture cs-picture2">
-              <!--Mobile Image-->
-              <source media="(max-width: 600px)" srcset="/assets/images/4.jpg">
-              <!--Tablet and above Image-->
-              <source media="(min-width: 601px)" srcset="/assets/images/4.jpg">
-              <img  decoding="async" src="/assets/images/4.jpg" alt="photograph of a woman" width="405" height="376">
-          </picture>
-          <!--Middle image-->
-          <picture class="cs-picture cs-picture3">
-              <!--Mobile Image-->
-              <source media="(max-width: 600px)" srcset="/assets/images/5.jpg">
-              <!--Tablet and above Image-->
-              <source media="(min-width: 601px)" srcset="/assets/images/5.jpg">
-              <img decoding="async" src="/assets/images/5.jpg" alt="children's birthday" width="218" height="155">
-          </picture>
-      </div>
 
 
+                                
+</Style>
 
-       
-          <h1 class="cs-title" data-aos="fade-up"> Expert Remodeling for Homes <SPAN style="color: var(--primaryLight);">&</SPAN> Businesses</h1>
-    
-          <p class="cs-text">
-            From modern interior renovations to durable exterior upgrades and hassle free maintenance, we help homeowners and business owners enhance their spaces - without the stress.   
-            </p>
-          <a style="margin-top: 30px;" href="tel:{{client.phoneForTel}}" class="cs-button-solid">Call: {{client.phoneForTel}}</a>
-           
 
-      
-      </div>
-      
-     
-      <picture class="cs-background">
-        
-          <!--Mobile Image-->
-          <source media="(max-width: 600px)" srcset="/assets/images/2.jpg">
-          <!--Tablet and above Image-->
-          <source media="(min-width: 601px)" srcset="/assets/images/2.jpg">
-          <img decoding="async" src="/assets/images/2.jpg" alt="photographer" width="1280" height="568">
-      </picture>
-      
-  </div>
+<script>
+  class Slideshow {
+    constructor() {
+        // Initialize DOM elements for the slideshow
+        // Converts NodeList to Array for better method availability
+        this.slides = Array.from(document.querySelectorAll('.cs-slide'));
+        this.nextButton = document.querySelector('.cs-slideshow-next');
+        this.prevButton = document.querySelector('.cs-slideshow-prev');
 
-</section>
+        // Track the currently displayed slide and animation state
+        this.currentIndex = 0;
+        this.isMoving = false;
+
+        // Setup event listeners and initial slide positions
+        this.init();
+    }
+
+    init() {
+        // Attach click handlers for navigation, using optional chaining for null safety
+        this.nextButton?.addEventListener('click', () => this.moveSlide('next'));
+        this.prevButton?.addEventListener('click', () => this.moveSlide('prev'));
+
+        // Position slides in their starting configuration
+        this.updateSlideStates();
+    }
+
+    updateSlideStates() {
+        this.slides.forEach((slide, index) => {
+            // Clear existing position classes to prevent conflicts
+            slide.classList.remove('active', 'prev', 'next', 'initial');
+
+            // Apply appropriate positioning class based on slide's relation to current slide
+            if (index === this.currentIndex) {
+                slide.classList.add('active');
+            } else if (index === this.getAdjacentIndex('prev')) {
+                slide.classList.add('prev');
+            } else if (index === this.getAdjacentIndex('next')) {
+                slide.classList.add('next');
+            }
+        });
+    }
+
+    getAdjacentIndex(direction) {
+        const totalSlides = this.slides.length;
+        // Calculate the index of the next/previous slide with wrapping
+        // Using modulo to create circular navigation
+        if (direction === 'next') {
+            return (this.currentIndex + 1) % totalSlides;
+        } else {
+            return (this.currentIndex - 1 + totalSlides) % totalSlides;
+        }
+    }
+
+    moveSlide(direction) {
+        // Prevent animation overlap by checking if transition is in progress
+        if (this.isMoving) return;
+        this.isMoving = true;
+
+        // Update the current slide index based on navigation direction
+        this.currentIndex = this.getAdjacentIndex(direction);
+
+        // Apply new positioning classes to slides
+        this.updateSlideStates();
+
+        // Re-enable navigation after transition animation completes
+        setTimeout(() => {
+            this.isMoving = false;
+        }, 300); // Timeout should match CSS transition-duration
+    }
+}
+
+// Create slideshow instance once DOM is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+    new Slideshow();
+});
+                                
+</script>
