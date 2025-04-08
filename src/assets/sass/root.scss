@@ -30,7 +30,7 @@
         /* 13px - 16px */
         --topperFontSize: clamp(1.5rem, 1.6vw, 1rem);
         /* 31px - 49px */
-        --headerFontSize: clamp(2.9375rem, 3.9vw, 3.0625rem);
+        --headerFontSize: clamp(2.5375rem, 3.9vw, 3.0625rem);
         --bodyFontSize: 1.4rem;
 
         /* 60px - 100px top and bottom */
@@ -45,7 +45,7 @@
         font-size: var(--topperFontSize);
         line-height: 1.2em;
         font-weight: 700;
-        color: var(--primaryDark);
+        color: var(--secondary);
         text-align: inherit;
     }
 
