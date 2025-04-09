@@ -1,0 +1,254 @@
+<!-- ============================================ -->
+<!--                 Why Choose Us                -->
+<!-- ============================================ -->
+
+
+<style>
+    /*-- -------------------------- -->
+<---        Why Choose Us       -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #why-choose-1710 {
+    /* moved padding to the container so the cs-picture can be full width */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  #why-choose-1710 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    /* moved to container instead of section, moves back to the section container at tablet */
+    padding: var(--sectionPadding);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 40px - 64px */
+    gap: clamp(2.5rem, 3.9vw, 4rem);
+    position: relative;
+    z-index: 1;
+  }
+  #why-choose-1710 .cs-container:before {
+    /* light grey background overlay */
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #f7f7f7;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #why-choose-1710 .cs-content {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #why-choose-1710 .cs-title {
+    margin: 0;
+    max-width: 23ch;
+  }
+  #why-choose-1710 .cs-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* 16px - 32px */
+    gap: clamp(1rem, 3.2vw, 2rem);
+  }
+  #why-choose-1710 .cs-card-group {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    /* 16px - 32px */
+    gap: clamp(1rem, 2vw, 2rem);
+  }
+  #why-choose-1710 .cs-item {
+    list-style: none;
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  #why-choose-1710 .cs-item-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  #why-choose-1710 .cs-item-number {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--primary);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  #why-choose-1710 .cs-h3 {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--headerColor);
+  }
+  #why-choose-1710 .cs-item-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #why-choose-1710 .cs-picture {
+    width: 100%;
+    max-width: 80rem;
+    /* 340px - 620px */
+    height: clamp(21.25rem, 47vw, 38.75rem);
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* clips the img from overflowing the container on hover */
+    overflow: hidden;
+  }
+  #why-choose-1710 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #why-choose-1710 .cs-floater {
+    /* 246px - 582px */
+    width: clamp(15.375rem, 50vw, 36.375rem);
+    height: auto;
+    position: absolute;
+    right: -4rem;
+    top: -0.5rem;
+    z-index: -1;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #why-choose-1710 {
+    padding: var(--sectionPadding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 60px - 100px */
+    gap: clamp(3.75rem, 3.9vw, 6.25rem);
+  }
+  #why-choose-1710 .cs-container {
+    padding: 0;
+  }
+  #why-choose-1710 .cs-container:before {
+    width: 130vw;
+    height: 180%;
+    top: -9.375rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #why-choose-1710 .cs-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+                                
+</style>
+<section id="why-choose-1710">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Amenities That Matter</span>
+            <h2 class="cs-title">Everything You Need for a Comfortable Stay</h2>
+        </div>
+        <div class="cs-wrapper">
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <span class="cs-item-number"> <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/check.svg" alt="icon" width="22" height="22"></span>
+                    <div class="cs-item-wrapper">
+                        <h3 class="cs-h3">Accessibility</h3>
+                        <p class="cs-item-text">Property has wheelchair access</p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <span class="cs-item-number"> <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/check.svg" alt="icon" width="22" height="22"></span>
+                    <div class="cs-item-wrapper">
+                        <h3 class="cs-h3">Check-In & Front-Desk</h3>
+                        <p class="cs-item-text">24-hour check-in and front desk</p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <span class="cs-item-number"> <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/check.svg" alt="icon" width="22" height="22"></span>
+                    <div class="cs-item-wrapper">
+                        <h3 class="cs-h3">Common Areas</h3>
+                        <p class="cs-item-text">Fireplace and picnic area available</p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <span class="cs-item-number"> <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/check.svg" alt="icon" width="22" height="22"></span>
+                    <div class="cs-item-wrapper">
+                        <h3 class="cs-h3">Eco-Friendly Practices</h3>
+                        <p class="cs-item-text">Towels changed upon request</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <span class="cs-item-number"> <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/check.svg" alt="icon" width="22" height="22"></span>
+                    <div class="cs-item-wrapper">
+                        <h3 class="cs-h3">Guest Comfort</h3>
+                        <p class="cs-item-text">AC, heating, bridal suite, internet, and more</p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <span class="cs-item-number"> <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/check.svg" alt="icon" width="22" height="22"></span>
+                    <div class="cs-item-wrapper">
+                        <h3 class="cs-h3">Wellness</h3>
+                        <p class="cs-item-text">Relax with a hot tub experience</p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <span class="cs-item-number"> <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/check.svg" alt="icon" width="22" height="22"></span>
+                    <div class="cs-item-wrapper">
+                        <h3 class="cs-h3">Safety & Hygiene</h3>
+                        <p class="cs-item-text">Daily sanitation, security systems, and alarms</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+        <!---SVG Graphic-->
+        <img class="cs-floater" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/diagnol-ovals.svg" alt="graphic" loading="lazy" decoding="async" height="710" aria-hidden="true" width="690">
+    </div>
+    <picture class="cs-picture">
+        <source media="(min-width: 1024px)"
+                srcset="/assets/images/slider8.jpg">
+        <source media="(min-width: 601px)"
+                srcset="/assets/images/slider8.jpg">
+        <source media="(max-width: 600px)"
+                srcset="/assets/images/slider8.jpg">
+        <img aria-hidden="true" loading="lazy" decoding="async"
+                src="/assets/images/slider8.jpgg"
+                alt="meeting" width="1280" height="620">
+    </picture>
+</section>
+                                

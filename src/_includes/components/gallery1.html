@@ -1,6 +1,92 @@
 <!-- ============================================ -->
 <!--                   Gallery                    -->
 <!-- ============================================ -->
+<section id="gallery-1446">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Gallery</span>
+                <h2 class="cs-title">Our Photo Gallery</h2>
+            </div>
+        </div>
+        <!--Gallery-->
+        <div class="cs-gallery">
+            <!--Picture 1-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/1.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/1.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/1.jpg" alt="hotel room view" width="305" height="400">
+            </picture>
+            <!--Picture 2-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/2.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/2.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/2.jpg" alt="hotel room" width="305" height="400">
+            </picture>
+            <!--Picture 3-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/2-2.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/2-2.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/2-2.jpg" alt="hotel kitchen area" width="305" height="400">
+            </picture>
+            <!--Picture 4-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/3.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/3.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/3.jpg" alt="hotel bathroom" width="305" height="400">
+            </picture>
+            <!--Picture 5-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/4.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/4.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/4.jpg" alt="hallway view" width="305" height="400">
+            </picture>
+            <!--Picture 6-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/5.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/5.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/5.jpg" alt="hotel lounge" width="305" height="400">
+            </picture>
+            <!--Picture 7-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/6.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/6.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/6.jpg" alt="bedroom area" width="305" height="400">
+            </picture>
+            <!--Picture 8-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/8.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/8.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/8.jpg" alt="second bedroom view" width="305" height="400">
+            </picture>
+            <!--Picture 9-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/9.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/9.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/9.jpg" alt="dining area" width="305" height="400">
+            </picture>
+            <!--Picture 10-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/home1.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/home1.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/home1.jpg" alt="exterior view" width="305" height="400">
+            </picture>
+            <!--Picture 11-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/home2.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/home2.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/home2.jpg" alt="second exterior view" width="305" height="400">
+            </picture>
+            <!--Picture 12-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/home3.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/home3.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/home3.jpg" alt="third exterior view" width="305" height="400">
+            </picture>
+        </div>
+    </div>
+</section>
+                                
 
 <style>
     /*-- -------------------------- -->
@@ -9,12 +95,10 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #gallery-48 {
+    #gallery-1446 {
         padding: var(--sectionPadding);
-        padding-top: 0px;
-        position: relative;
     }
-    #gallery-48 .cs-container {
+    #gallery-1446 .cs-container {
         width: 100%;
         max-width: 80rem;
         margin: auto;
@@ -23,153 +107,48 @@
         align-items: center;
         /* 48px - 64px */
         gap: clamp(3rem, 6vw, 4rem);
+        position: relative;
     }
-    #gallery-48 .cs-content {
-        /* set text align to left if content needs to be left aligned */
-        text-align: center;
+    #gallery-1446 .cs-content {
+        text-align: left;
         width: 100%;
         display: flex;
-        flex-direction: column;
-        /* centers content horizontally, set to flex-start to left align */
-        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 1.5rem;
     }
-
-    #gallery-48 .cs-title {
+    #gallery-1446 .cs-title {
         margin: 0;
-        max-width: 20ch;
     }
-    #gallery-48 .cs-image-group {
-        /* used rem so it doesn't scale with the font size of on parent */
-        font-size: min(1.1vw, 1em);
+    #gallery-1446 .cs-gallery {
         width: 100%;
         padding: 0;
         margin: 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        /* 8px - 20px */
-        gap: clamp(0.5rem, 2vw, 1.25rem);
-    }
-    #gallery-48 .cs-row {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        /* 8px - 20px */
-        gap: clamp(0.5rem, 2vw, 1.25rem);
-    }
-    #gallery-48 .cs-picture {
-        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(19.0625rem, 1fr));
+        /* 16px - 20px */
+        gap: clamp(1rem, 1.5vw, 1.25rem);
         position: relative;
-        display: block;
     }
-    #gallery-48 .cs-picture img {
+    #gallery-1446 .cs-image {
+        /* 260px - 360px */
+        min-height: clamp(16.25rem, 60vw, 20rem);
+        border-radius: 1rem;
+        /* clips the image corners */
+        overflow: hidden;
+        display: block;
+        position: relative;
+    }
+    #gallery-1446 .cs-image img {
         position: absolute;
         top: 0;
         left: 0;
         height: 100%;
         width: 100%;
+        /* makes it act like a background image */
         object-fit: cover;
     }
-    #gallery-48 .cs-row-1 .cs-picture-1 {
-        height: 35.4375em;
-    }
-    #gallery-48 .cs-row-1 .cs-picture-2 {
-        height: 39.3125em;
-    }
-    #gallery-48 .cs-row-1 .cs-picture-3 {
-        height: 32em;
-    }
-    #gallery-48 .cs-row-2 .cs-picture-1 {
-        height: 30.75em;
-    }
-    #gallery-48 .cs-row-2 .cs-picture-2 {
-        height: 32.3125em;
-    }
-    #gallery-48 .cs-row-2 .cs-picture-3 {
-        height: 39.3125em;
-    }
-    #gallery-48 .cs-row-3 .cs-picture-1 {
-        height: 39.0625em;
-    }
-    #gallery-48 .cs-row-3 .cs-picture-2 {
-        height: 28.25em;
-    }
-    #gallery-48 .cs-row-3 .cs-picture-3 {
-        height: 39.3125em;
-    }
-  
 }
-
                                 
 </style>
-
-<section id="gallery-48">
-    <div class="cs-container">
-
-        <div class="cs-image-group">
-            <div class="cs-row cs-row-1">
-                <!-- Row 1-->
-                <picture class="cs-picture cs-picture-1">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port1-m.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port1.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port1.jpg" alt="new hallway" width="420" height="567">
-                </picture>
-                <picture class="cs-picture cs-picture-2">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port4-m.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port4.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port4.jpg" alt="new home construction" width="420" height="630">
-                </picture>
-                <picture class="cs-picture cs-picture-3">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port7-m.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port7.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port7.jpg" alt="building a new wall" width="420" height="512">
-                </picture>
-                <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-            </div>
-            <!-- Row 2 -->
-            <div class="cs-row cs-row-2">
-                <picture class="cs-picture cs-picture-1">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port2-m.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port2.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port2.jpg" alt="new kitchen" width="420" height="492">
-                </picture>
-                <picture class="cs-picture cs-picture-2">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port5-m.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port5.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port5.jpg" alt="apartment addition" width="420" height="517">
-                </picture>
-                <picture class="cs-picture cs-picture-3">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port8-m.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port8.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port8.jpg" alt="kew kitchen cabinets" width="420" height="629">
-                </picture>
-                <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-            </div>
-            <!-- Row 3 -->
-            <div class="cs-row cs-row-3">
-                <picture class="cs-picture cs-picture-1">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port3-m.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port3.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port3.jpg" alt="new black window structure" width="420" height="625">
-                </picture>
-                <picture class="cs-picture cs-picture-2">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port6-m.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port6.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port6.jpg" alt="kitchen rebovation" width="420" height="452">
-                </picture>
-                <picture class="cs-picture cs-picture-3">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port9-m.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port9.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port9.jpg" alt="bathroom renovation" width="420" height="629">
-                </picture>
-                <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-            </div>
-        </div>
-        <a style="margin-top: 30px;" href="tel:{{client.phoneForTel}}" class="cs-button-solid">Get Your Free Quote</a>
-           
-
-    </div>
-</section>
-                                

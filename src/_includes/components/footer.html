@@ -42,7 +42,7 @@
   }
   #cs-footer-1763 .cs-picture {
     padding: 1.5rem;
-    background-color: var(--primaryDark);
+    background-color:#1763C2;
     display: block;
     border-radius: 5px;
   }
@@ -289,7 +289,7 @@
     <!-- Logo Group -->
     <div class="cs-logo-group" style="margin: 0px auto 80px; max-width: 80rem;">
         <a aria-label="go back to home" class="cs-logo" href="">
-            <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/logo_dark.svg" alt="logo" width="240" height="32">
+            <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/logo2.png" alt="logo" width="240" height="32">
         </a>
         
     </div>
@@ -310,7 +310,7 @@
                     
                     {{client.address.lineOne}}<BR>
                     {{client.address.city}}
-                    {{client.address.state}}
+                    {{client.address.state}}<BR>
                     {{client.address.zip}}
                 </span>
             </div>
@@ -320,9 +320,10 @@
                 <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-footer-clock.svg" alt="clock" loading="lazy" decoding="async" height="32" width="32">
             </picture>
             <div class="cs-flex">
-                <h3 class="cs-h3">Working Hours</h3>
-                <span class="cs-card-info">Monday - Saturday: 10:00 - 20:00 </span>
-                <span class="cs-card-info">Sunday: Closed</span>
+                <h3 class="cs-h3">24 Hour Check In</h3>
+                <span class="cs-card-info">Check In Time: 3:00 PM
+                  </span>
+                <span class="cs-card-info">Check Out Time: 11:00 AM </span>
             </div>
         </div>
         <div class="cs-card">
@@ -332,7 +333,7 @@
             <div class="cs-flex">
                 <h3 class="cs-h3">Contact Us</h3>
                 <a href="tel:{{client.phoneForTel}}" class="cs-card-info">{{client.phoneForTel}} </a>
-                <a href="" class="cs-card-info">{{client.email}}</a>
+             
             </div>
         </div>
         <img class="cs-graphic cs-light" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/long-texture.svg" alt="graphic" height="151" width="1920" loading="lazy" decoding="async">
@@ -343,113 +344,46 @@
 
         <!-- Links -->
         <div class="cs-ul-wrapper" >
-            <span class="cs-header">{{client.name}}</span>
+            <span class="cs-header">Chesaning Inn & Suites</span>
             <ul id="cs-expanded" class="cs-ul">
-                {% set navPages = collections.all | eleventyNavigation %}
+              <li class="cs-li">
+                <a href="/" class="cs-link {{ 'cs-active' if '/' == page.url }}">
+                    Home
+                </a>
+            </li>
 
-                {# Loop through all pages with a eleventyNavigation in the frontmatter #}
-                {% for entry in navPages %}
-
-                {# Define a hasChild variable to make it easier to test what navigation items are have child
-                dropdown pages #}
-                {% set hasChild = entry.children.length %}
-
-                {# Check the frontmatter for hideOnMobile/hideOnDesktop. Form a list of classes to be joined when
-                the item is rendered #}
-                {% set hideClasses = [] %}
-                {% if entry.hideOnMobile %}
-                {% set hideClasses = (hideClasses.push("cs-hide-on-mobile"), hideClasses) %}
-                {% endif %}
-                {% if entry.hideOnDesktop %}
-                {% set hideClasses = (hideClasses.push("cs-hide-on-desktop"), hideClasses) %}
-                {% endif %}
-
-                {# If this page is a dropdown, give it the appropriate classes, icons and accessibility attributes
-                #}
-                <li class="cs-li {% if hasChild %} cs-dropdown {% endif %} {{ hideClasses | join(" ") }}">
-
-                    {# If the page has child dropdown pages, render it as a <button> tag with the appropriate
-                        dropdown HTML #}
-                        {% if hasChild %}
-
-                        {# Check to see if the user's current page is one of the child pages. If so, apply the
-                        cs-active class to the dropdown parent #}
-                        {% set activeClass = "" %}
-                        {% for child in entry.children %}
-                        {% if child.url == page.url %}
-                        {% set activeClass = "cs-active" %}
-                        {% endif %}
-                        {% endfor %}
-
-                        {# Render the <button> with the active class, dropdown icon and child links #}
-                            <button class="cs-link cs-dropdown-button {{ activeClass }}" aria-expanded="false"
-                                aria-controls="dropdown-{{ entry.key }}" aria-label="dropdown-{{ entry.key }}">
-                                {{ entry.key }}
-                                <img class="cs-drop-icon" style="filter: brightness(0) invert(1);"
-                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg"
-                                    alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
-                            </button>
-
-                            {# Dropdowns have another ul/li set up within the parent li, which gets rendered in the
-                            same way as a normal link #}
-                            <ul class="cs-drop-ul" id="dropdown-{{ entry.key }}">
-                                {% for child in entry.children %}
-                                <li class="cs-drop-li" style="padding:5px 30px 5px 0px;">
-                                    <a href="{{ child.url }}" class="cs-link cs-drop-link">{{ child.key }}</a>
-                                </li>
-                                {% endfor %}
-                            </ul>
-                            {% else %}
-                            {# Normal pages are rendered as <a> tags, in the normal way you'd expect #}
-                                <a href="{{ entry.url }}"
-                                    class="cs-link {% if entry.url == page.url %} cs-active {% endif %}" {% if
-                                    entry.url==page.url %} aria-current="page" {% endif %}>
-                                    {{ entry.key }}
-                                </a>
-                                {% endif %}
-                </li>
-                {% endfor %}
+            <li class="cs-li">
+                <a href="/rooms" class="cs-link {{ 'cs-active' if 'rooms' == page.fileSlug }}">
+                   Rooms
+                </a>
+            </li>
+            <li class="cs-li">
+                <a href="/amenities" class="cs-link {{ 'cs-active' if 'amenities' == page.fileSlug }}">
+                    Amenities
+                </a>
+            </li>
+            <li class="cs-li">
+                <a href="/photos" class="cs-link {{ 'cs-active' if 'photos' == page.fileSlug }}">
+                    Photos
+                </a>
+            </li>
+            <li class="cs-li">
+                <a href="/contact" class="cs-link {{ 'cs-active' if 'contact' == page.fileSlug }}">
+                   Contact 
+                </a>
+            </li>
             </ul>
         </div>
 
         <div class="cs-ul-wrapper">
-            <span class="cs-header">Service Areas</span>
-            <ul class="cs-ul">
-                <li class="cs-li">
-                    {{client.serviceAreas.areaOne}}
-                </li>
-                <li class="cs-li">
-                    {{client.serviceAreas.areaOne}}
-                </li>
-                <li class="cs-li">
-                    {{client.serviceAreas.areaOne}}
-                </li>
-                <li class="cs-li">
-                    {{client.serviceAreas.areaOne}}
-                </li>
-                <li class="cs-li">
-                    {{client.serviceAreas.areaOne}}
-                </li>
-                <li class="cs-li">
-                    {{client.serviceAreas.areaOne}}
-                </li>
-                <li class="cs-li">
-                    {{client.serviceAreas.areaOne}}
-                </li>
-                <li class="cs-li">
-                    {{client.serviceAreas.areaOne}}
-                </li>
-            </ul>
+        
         </div>
         <div class="cs-contact">
             <div class="cs-contact-info">
                 <span class="cs-header">Follow Us</span>
                 {% include 'components/social-links.html' %}
             </div>
-            <div class="cs-contact-info">
-                <span class="cs-topper">Call Us Any Time</span>
-                <a href="tel:{{client.phoneForTel}}" class="cs-contact-link">{{client.phoneForTel}}</a>
-            </div>
+        
        
         </div>
     </div>
