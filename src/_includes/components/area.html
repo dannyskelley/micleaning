@@ -1,0 +1,382 @@
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+
+<style>
+    /*-- -------------------------- -->
+<---          Banner            -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #banner-850 {
+    /* 175px - 260px top */
+    padding: clamp(10.9375rem, 20vw, 16.25rem) 1rem clamp(6.25rem, 14vw, 12vw);
+    /* clips svg wave from causing overflow issues */
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #banner-850 .cs-container {
+    text-align: center;
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #banner-850 .cs-int-title {
+    /* 39px - 61px */
+    font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+    position: relative;
+  }
+  #banner-850 .cs-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #banner-850 .cs-background:before {
+    /* background color overlay */
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #1a1a1a;
+    opacity: 0.64;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #banner-850 .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* Makes img tag act as a background image */
+    object-fit: cover;
+  }
+  #banner-850 .cs-wave {
+    /* we're stretching the svg wider than the viewport so it's taller and has more of a presence */
+    width: 48rem;
+    height: auto;
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -1px;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #banner-850 .cs-background:before {
+    opacity: 1;
+    background: linear-gradient(90.01deg, rgba(0, 0, 0, 0.9) 16.86%, rgba(0, 0, 0, 0) 100%);
+  }
+  #banner-850 .cs-wave {
+    width: 100%;
+    left: 0;
+    transform: none;
+  }
+}
+
+/*-- -------------------------- -->
+<---        Content Page        -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #content-page-850 {
+    padding: var(--sectionPadding);
+    background-color: #fff;
+    /* clips the wave background from causing overflow issues when it goes off screen */
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #content-page-850 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+  }
+  #content-page-850 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 39.375rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #content-page-850 h2,
+  #content-page-850 h3,
+  #content-page-850 h4,
+  #content-page-850 h5,
+  #content-page-850 h6 {
+    font-weight: 700;
+    text-align: inherit;
+    margin: 0 0 1rem 0;
+    color: var(--secondary);
+  }
+  #content-page-850 h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+  #content-page-850 h3 {
+    font-size: 1.5rem;
+    color: black;
+    margin-top: 50px;
+  }
+  #content-page-850 h4,
+  #content-page-850 h5,
+  #content-page-850 h6 {
+    font-size: 1.25rem;
+  }
+  #content-page-850 .cs-button-solid {
+    margin-bottom: 2rem;
+  }
+  #content-page-850 .cs-no-margin {
+    margin: 0;
+  }
+  #content-page-850 .cs-color {
+    color: var(--primary);
+  }
+  #content-page-850 p {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    margin: 0 0 1rem 0;
+    color: var(--bodyTextColor);
+  }
+  #content-page-850 p:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #content-page-850 p a {
+    font-size: inherit;
+    line-height: inherit;
+    text-decoration: underline;
+    color: var(--primary);
+  }
+  #content-page-850 ol,
+  #content-page-850 ul {
+    padding-left: 1.5rem;
+    margin: 0 0 2rem 0;
+    color: var(--bodyTextColor);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #content-page-850 ul li {
+    list-style: none;
+    color: inherit;
+    position: relative;
+  }
+  #content-page-850 ul li:before {
+    /* custom list bullet */
+    content: "";
+    width: 3px;
+    height: 3px;
+    background: currentColor;
+    opacity: 1;
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    top: 0.625rem;
+    left: -0.75rem;
+  }
+  #content-page-850 img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  #content-page-850 .cs-image-group {
+    width: 50%;
+    max-width: 33.875rem;
+    display: none;
+    position: relative;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  #content-page-850 .cs-picture {
+    width: 100%;
+    /* 300px - 520px */
+    height: clamp(18.75rem, 40vw, 32.5rem);
+    box-shadow: 0px 3.3478px 50.2169px rgba(0, 0, 0, 0.16);
+    /* 125px - 200px */
+    border-radius: clamp(7.8125rem, 15vw, 12.5rem) 0 clamp(7.8125rem, 15vw, 12.5rem) 0;
+    /* prevents border from affecting height and width */
+    box-sizing: border-box;
+    /* clips img tag corners */
+    overflow: hidden;
+    display: block;
+    position: relative;
+  }
+  #content-page-850 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    /* makes it act like a background image */
+    object-fit: cover;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #content-page-850 .cs-container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  #content-page-850 .cs-content {
+    flex: none;
+    width: 60%;
+    /* sends it to the right in the 2nd position */
+    order: 2;
+  }
+  #content-page-850 .cs-image-group {
+    display: flex;
+  }
+}
+                                
+</style>
+
+<div id="banner-850">
+    <div class="cs-container">
+        <span class="cs-int-title">Area Events & Things to Do</span>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background" aria-hidden="true">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/slider1.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/slider1.jpg">
+        <img loading="lazy" decoding="async" src="/assets/images/slider1.jpg" alt="yoga" width="1280" height="568">
+    </picture>
+    <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
+    <svg class="cs-wave" width="1920" height="179" viewBox="0 0 1920 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 179V91.3463C1835.33 91.3463 1715.47 76.615 1549.2 32.9521C1299.48 -32.3214 1132.77 12.1006 947.32 61.5167C810.762 97.9044 664.042 137 466.533 137C331.607 137 256.468 123.447 188.082 111.113C130.974 100.812 78.5746 91.3609 0 91.3609V179H1920Z" fill="white"/>
+    </svg>
+</div>
+
+<!-- ============================================ -->
+<!--                 Content Page                 -->
+<!-- ============================================ -->
+
+<!-- ============================================ 
+    This Stitch is used for content heavy interior pages
+    that have no design or layout.  Often times these are 
+    content silos where you talk extensively about a topic
+    to educate your visitors and rank on Google for the 
+    content.  These are great for pages that have a TON
+    of content.  Design isn't important here, it's all 
+    about making the content accessible and easy to read.
+================================================= -->
+
+<section id="content-page-850">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-topper">🌟 Explore Chesaning, MI</div>
+            <h1 class="cs-title"> Events & Attractions Near Chesaning Inn & Suites</h1>
+            <h2>Discover the Charm of Chesaning, Michigan</h2>
+            <p>Stay close to the action and experience the best of Mid Michigan. Whether you're visiting for a weekend getaway, a local festival, or just passing through, Chesaning Inn & Suites puts you right in the heart of it all. Our convenient location on Brady Road means you're just minutes away from the area’s most beloved events, historic landmarks, outdoor adventures, and small town treasures.</p>
+
+            <h3>🎉 Annual Events in Chesaning, MI</h3>
+            <h4>Chesaning Showboat Park Events</h4>
+            <ul>
+                <li><strong>Chesaning Showboat Music Festival (Summer):</strong> A beloved tradition featuring live music, food vendors, crafts, and family activities.</li>
+                <li><strong>River Days Festival:</strong> Celebrate summer with parades, fireworks, and community wide celebrations.</li>
+                <li><strong>Car Shows & Tractor Pulls:</strong> Perfect for vintage vehicle fans and motorheads alike.</li>
+                <li><strong>Halloween Spooktacular (October):</strong> Family friendly fall fun with costumes, treats, and hayrides.</li>
+            </ul>
+            <p><em>Distance from hotel: 2 minutes drive</em></p>
+
+            <h4>Saginaw County Fair – Chesaning</h4>
+            <p>Held every August, this is one of Michigan’s best county fairs with livestock shows, carnival rides, food, and grandstand entertainment.</p>
+            <p><em>Distance: 5 minutes drive</em></p>
+
+            <h3>🛍️ Local Attractions & Must See Spots</h3>
+            <h4>Downtown Chesaning Shopping District</h4>
+            <ul>
+                <li><strong>The Malt Shop –</strong> Classic ice cream parlor and burgers.</li>
+                <li><strong>Showboat Antiques –</strong> A treasure trove of collectibles.</li>
+                <li><strong>Miller’s Bakery & Deli –</strong> Fresh bread, pastries, and famous donuts.</li>
+            </ul>
+
+            <h4>Twin Brooks Golf Club</h4>
+            <p>18 hole public golf course perfect for a relaxing day outdoors.</p>
+            <p><em>Distance: 7 minutes drive</em></p>
+
+            <h4>Shiawassee River Canoe & Kayak Rentals</h4>
+            <p>Enjoy a scenic paddle through the lush countryside—great for couples or family outings.</p>
+            <p><em>Available seasonally. Distance: 3 minutes drive</em></p>
+
+            <h3>🏞️ Nature & Outdoor Fun</h3>
+            <ul>
+                <li><strong>Wildlife Observation at Riverfront Park:</strong> Great for birdwatching, fishing, and riverside walks.</li>
+                <li><strong>Rail Trail for Biking and Walking:</strong> Connect with other nearby towns via the local rail trail system.</li>
+            </ul>
+
+            <h3>📍 Nearby Towns Worth Exploring</h3>
+            <ul>
+                <li><strong>Frankenmuth, MI (35 min):</strong> Michigan’s “Little Bavaria” with shopping, family attractions, and the famous Bronner’s Christmas Wonderland.</li>
+                <li><strong>Birch Run Premium Outlets (30 min):</strong> Popular shopping destination with major brand discounts.</li>
+                <li><strong>Owosso, MI (20 min):</strong> Historic downtown, dining, and the Steam Railroading Institute.</li>
+            </ul>
+
+            <h3>📆 Planning Your Trip Around Local Events?</h3>
+            <ul>
+                <li><strong>Spring:</strong> Antique festivals, garden shows, and opening of golf</li>
+                <li><strong>Summer:</strong> Showboat Festival, River Days, canoeing & camping</li>
+                <li><strong>Fall:</strong> Halloween events, color tours, harvest markets</li>
+                <li><strong>Winter:</strong> Holiday shopping, cozy fireplace stays, snow fun</li>
+            </ul>
+
+            <h3>🏨 Stay Close. Sleep Easy.</h3>
+            <p>After a full day exploring the area or attending a festival, come back to a warm, inviting room at Chesaning Inn & Suites. Whether you're here for business, a romantic getaway, or family fun, our suites with Jacuzzis, fireplaces, and dog friendly rooms offer the perfect home base.</p>
+
+            <h3>💬 Ready to Book Your Stay Near the Action?</h3>
+            <p><strong>Call us at:</strong> <a href="tel:9898452333">989-845-2333</a> or Book Online to guarantee the best rates for event weekends.</p>
+            <p>
+                <strong>Address:</strong> 12898 Brady Rd, Chesaning, MI 48616<br>
+                <strong>Check-In:</strong> 3:00 PM | <strong>Check-Out:</strong> 11:00 AM
+            </p>
+        </div>
+        <div class="cs-image-group">
+            <!--Top Picture-->
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="/assets/images/1.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/1.jpg">
+                <img decoding="async" src="/assets/images/1.jpg" alt="Chesaning Event" width="542" height="520" aria-hidden="true">
+            </picture>
+            <!--Top Picture-->
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="/assets/images/2.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/2.jpg">
+                <img decoding="async" src="/assets/images/2.jpg" alt="Downtown Chesaning" width="542" height="520" aria-hidden="true">
+            </picture>
+        </div>
+    </div>
+</section>
+
+                                
