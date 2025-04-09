@@ -1,423 +1,216 @@
-<!-- ============================================ -->
-<!--                  Services                    -->
-<!-- ============================================ -->
-
 <style>
-    /*-- -------------------------- -->
-<---          Services          -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
+    /* Services Section Styles */
     #services-886 {
-        padding: var(--sectionPadding);
-        /* clips the svg wave from overflowing */
-        overflow: hidden;
-        position: relative;
+        padding: var(--sectionPadding, 4rem 1rem);
         background-color: #CFE6FF;
+        position: relative;
         z-index: 1;
     }
+
     #services-886 .cs-container {
-        width: 100%;
-        /* changes to 1280px at desktop */
-        max-width: 34.375em;
+        max-width: 80rem;
         margin: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* 48px - 64px */
-        gap: clamp(3rem, 6vw, 4rem);
+        gap: 3rem;
     }
-    #services-886 .cs-content {
-        /* set text align to left if content needs to be left aligned */
+
+    #services-886 .cs-title {
+        font-size: 2.25rem;
         text-align: center;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        /* centers content horizontally, set to flex-start to left align */
-        align-items: center;
+        color: #000;
     }
 
     #services-886 .cs-card-group {
-        width: 100%;
-        margin: 0;
-        padding: 0;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* 16px - 20px */
-        gap: clamp(1rem, 2vw, 1.25rem);
-        position: relative;
-        z-index: 1;
-    }
-    #services-886 .cs-item {
-        list-style: none;
-        width: 100%;
-        max-width: 25.8125rem;
-        margin: 0;
-        padding: 0;
-    }
-    #services-886 .cs-link {
-        text-align: center;
-        text-decoration: none;
-        width: 100%;
-        height: 22.25rem;
-        padding: 1.25rem;
-        /* prevents padding and border from affecting height and width */
-        box-sizing: border-box;
-        border-radius: 1rem;
-        /* clips img corners around the border */
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        gap: 0.75rem;
-        position: relative;
-    }
-    #services-886 .cs-h3 {
-        font-size: 1.25rem;
-        line-height: 1.2em;
-        text-align: inherit;
-        font-weight: 700;
-        margin: 0;
-        color: var(--bodyTextColorWhite);
-    }
-    #services-886 .cs-item-p {
-        font-size: 1rem;
-        line-height: 1.5em;
-        text-align: inherit;
-        margin: 0;
-        color: var(--bodyTextColorWhite);
-    }
-    #services-886 .cs-background {
-        width: 100%;
-        height: 100%;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        object-fit: contain;
-    }
-    #services-886 .cs-background:before {
-        /* gradient overlay */
-        content: "";
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-            0deg,
-            #000000 10.13%,
-            rgba(0, 0, 0, 0) 90.71%
-        );
-        opacity: 1;
-        position: absolute;
-        display: block;
-        bottom: 0;
-        left: 0;
-        transition: height 0.3s;
-    }
-    #services-886 .cs-background img {
-        height: 100%;
-        width: 100%;
-        /* Makes img tag act as a background image */
-        object-fit: cover;
-        position: relative;
-        z-index: -1;
-        transition: transform 0.6s;
-    }
-    #services-886 .cs-wave {
-        /* we're stretching the svg wider than the viewport so it's taller and has more of a presence */
-        width: 320%;
-        height: auto;
-        display: block;
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        transform: translateX(-50%);
-        z-index: -1;
-    }
-}
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    #services-886 .cs-container {
-        max-width: 80rem;
-    }
-    #services-886 .cs-card-group {
-        flex-direction: row;
         flex-wrap: wrap;
-        align-items: stretch;
+        justify-content: center;
+        gap: 2rem;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
     }
+
     #services-886 .cs-item {
-        width: 48.9%;
-    }
-}
-/* Small Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    #services-886 {
-        /* the padding grows with the screen width so as the svg gets taller it doesn't overlap the section */
-        padding-bottom: 14vw;
-    }
-    #services-886 .cs-item {
-        width: 30vw;
-    }
-    #services-886 .cs-link:hover .cs-h3,
-    #services-886 .cs-link:focus-within .cs-h3 {
-        color: var(--primary);
-        transform: translateY(0);
-    }
-    #services-886 .cs-link:hover .cs-item-p,
-    #services-886 .cs-link:focus-within .cs-item-p {
-        height: auto;
-        opacity: 1;
-        transform: translateY(0);
-    }
-    #services-886 .cs-link:hover .cs-background:before,
-    #services-886 .cs-link:focus-within .cs-background:before {
-        height: 180%;
-    }
-    #services-886 .cs-link:hover .cs-background img,
-    #services-886 .cs-link:focus-within .cs-background img {
-        transform: scale(1.1);
-    }
-    #services-886 .cs-h3 {
-        /* transform down the same amount as the flex gap */
-        transform: translateY(0.75rem);
-        transition:
-            transform 0.3s,
-            color 0.3s;
-    }
-    #services-886 .cs-item-p {
-        height: 0;
-        opacity: 0;
+        background-color: #fff;
+        border-radius: 1rem;
         overflow: hidden;
-        transform: translateY(3.125rem);
-        transition:
-            height 0.3s,
-            opacity 0.3s,
-            transform 0.3s;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        max-width: 22rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease;
     }
+
+    #services-886 .cs-item:hover {
+        transform: translateY(-5px);
+    }
+
+    #services-886 .cs-img img {
+        width: 100%;
+        height: 14rem;
+        object-fit: cover;
+        display: block;
+    }
+
+    #services-886 .cs-card-content {
+        padding: 1.5rem;
+        color: #333;
+    }
+
+    #services-886 .cs-card-content h3 {
+        font-size: 1.5rem;
+        margin: 0 0 0.75rem 0;
+        color: #222;
+    }
+
+    #services-886 .cs-card-content p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    @media (max-width: 600px) {
+        #services-886 .cs-card-group {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #services-886 .cs-item {
+            max-width: 100%;
+        }
+    }
+
     #services-886 .cs-wave {
         width: 100%;
+        height: auto;
+        display: block;
+        position: absolute;
+        bottom: 0;
         left: 0;
-        transform: none;
+        z-index: -1;
     }
-
-    #services-886 .cs-background:before {
-        /* gradient overlay */
-        content: "";
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-            0deg,
-            #000000 10.13%,
-            rgba(0, 0, 0, 0) 40.71%
-        );
-        opacity: 1;
-    }
-}
-
-                                
 </style>
 
 <section id="services-886">
     <div class="cs-container">
-        <div class="cs-content">
-          
-            <h2 class="cs-title">Our Rooms</h2>
-            
-        </div>
+        <h2 class="cs-title">Our Rooms</h2>
         <ul class="cs-card-group">
+            <!-- Repeat this block for each room -->
             <li class="cs-item">
-                
-               <div class="cs-link">
-                    
-                    <h3 class="cs-title" style="color: white; font-size: 34px;">Premium King bed</h3>
-                    <p class="cs-item-p" style="font-weight: normal;">
-                        Relax in comfort and style. This spacious room features a king bed, jacuzzi tub, large bathroom, air conditioning, free WiFi, a microwave, and mini fridge. Perfect for business or leisure.
-                    <BR><BR><b>Accommodates:
-                        2</b> 
-                    </p>
-                    <!--Backgorund Image-->
-                    <picture class="cs-background">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="/assets/images/1.jpg">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="/assets/images/1.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/1.jpg" alt="person" width="1280" height="568">
-                    </picture>
+                <div class="cs-img">
+                    <img src="/assets/images/1.jpg" alt="Premium King Bed">
                 </div>
-            </li>
-            
-            
-            <li class="cs-item">
-               <div class="cs-link">
-                    <h3 class="cs-title" style="color: white; font-size: 34px;">Double Queen Bed</h3>
-                    <p class="cs-item-p">
-                        Enjoy our elegant guest rooms, designed in warm beige tones and tailored to the needs of private and business travelers alike. All rooms have a large bathroom, a double bed, air conditioning, & free<BR> Wi-Fi.
-
-                                          <BR><BR><b>Accommodates:
-                            4</b> 
+                <div class="cs-card-content">
+                    <h3>Premium King Bed</h3>
+                    <p>
+                        Relax in comfort and style. This spacious room features a king bed, jacuzzi tub, large bathroom, air conditioning, free WiFi, a microwave, and mini fridge.
+                        <br><br><strong>Accommodates: 2</strong>
                     </p>
-                    <!--Backgorund Image-->
-                    <picture class="cs-background">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="/assets/images/2.jpg">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="/assets/images/2.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/2.jpg" alt="person" width="1280" height="568">
-                    </picture>
                 </div>
             </li>
 
-
+            <li class="cs-item">
+                <div class="cs-img">
+                    <img src="/assets/images/2.jpg" alt="Double Queen Bed">
+                </div>
+                <div class="cs-card-content">
+                    <h3>Double Queen Bed</h3>
+                    <p>
+                        Enjoy elegant guest rooms in warm beige tones with large bathroom, double bed, air conditioning, and free Wi-Fi.
+                        <br><br><strong>Accommodates: 4</strong>
+                    </p>
+                </div>
+            </li>
 
             <li class="cs-item">
-               <div class="cs-link">
-                    <h3 class="cs-title" style="color: white; font-size: 34px;">Jacuzzi Queen Suite</h3>
-                    <p class="cs-item-p">
+                <div class="cs-img">
+                    <img src="/assets/images/3.jpg" alt="Jacuzzi Queen Suite">
+                </div>
+                <div class="cs-card-content">
+                    <h3>Jacuzzi Queen Suite</h3>
+                    <p>
                         This spacious room has a jacuzzi tub next to the bed, queen-sized beds, a microwave, a mini-fridge, and a large bathroom.
-                                         <BR><BR><b>Accommodates:
-                            2</b> 
+                        <br><br><strong>Accommodates: 2</strong>
                     </p>
-                    <!--Backgorund Image-->
-                    <picture class="cs-background">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="/assets/images/3.jpg">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="/assets/images/3.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/3.jpg" alt="person" width="1280" height="568">
-                    </picture>
                 </div>
             </li>
-
-
-
-
 
             <li class="cs-item">
-               <div class="cs-link">
-                    <h3 class="cs-title" style="color: white; font-size: 34px;">King Fireplace Suite</h3>
-                    <p class="cs-item-p">
-                        Unwind in our cozy guest room featuring a fireplace with a king-sized bed, perfect for creating a warm and inviting atmosphere to enhance your stay. Escape to our romantic retreat featuring a cozy room with a fireplace, ideal for cuddling up with a good book.
-                    
-                    
-                        <BR><BR><b>Accommodates:
-                            2</b> 
+                <div class="cs-img">
+                    <img src="/assets/images/4.jpg" alt="King Fireplace Suite">
+                </div>
+                <div class="cs-card-content">
+                    <h3>King Fireplace Suite</h3>
+                    <p>
+                        Unwind in our cozy guest room featuring a fireplace and king-sized bed—perfect for a warm and romantic atmosphere.
+                        <br><br><strong>Accommodates: 2</strong>
                     </p>
-                    <!--Backgorund Image-->
-                    <picture class="cs-background">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="/assets/images/4.jpg">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="/assets/images/4.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/4.jpg" alt="person" width="1280" height="568">
-                    </picture>
                 </div>
             </li>
-
-
-
-
 
             <li class="cs-item">
-               <div class="cs-link">
-                    <h3 class="cs-title" style="color: white; font-size: 34px;">King Bed</h3>
-                    <p class="cs-item-p">
-                        Our King Standard room is perfect for a business traveler or a couple trying to get away and enjoy their time in Chesaning Inn & Suites.
-                        <BR><BR><b>Accommodates:
-                            2</b> 
+                <div class="cs-img">
+                    <img src="/assets/images/5.jpg" alt="King Bed">
+                </div>
+                <div class="cs-card-content">
+                    <h3>King Bed</h3>
+                    <p>
+                        Perfect for business travelers or couples looking for a peaceful getaway in Chesaning Inn & Suites.
+                        <br><br><strong>Accommodates: 2</strong>
                     </p>
-                    <!--Backgorund Image-->
-                    <picture class="cs-background">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="/assets/images/5.jpg">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="/assets/images/5.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/5.jpg" alt="person" width="1280" height="568">
-                    </picture>
                 </div>
             </li>
-
-
-
 
             <li class="cs-item">
-               <div class="cs-link">
-                    <h3 class="cs-title" style="color: white; font-size: 34px;">Handicap King Bed</h3>
-                    <p class="cs-item-p">
-                        An accessible motel room is a room that can be used and enjoyed by everyone, no matter their degree of mobility and room is meticulously designed to meet the needs of individuals with disabilities to ensuring their travel experiences are as seamless and barrier-free as possible.
-                        <BR><BR><b>Accommodates:
-                            2</b> 
+                <div class="cs-img">
+                    <img src="/assets/images/6.jpg" alt="Handicap King Bed">
+                </div>
+                <div class="cs-card-content">
+                    <h3>Handicap King Bed</h3>
+                    <p>
+                        Designed for accessibility, this room meets the needs of individuals with disabilities for a barrier-free experience.
+                        <br><br><strong>Accommodates: 2</strong>
                     </p>
-                    <!--Backgorund Image-->
-                    <picture class="cs-background">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="/assets/images/6.jpg">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="/assets/images/6.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/6.jpg" alt="person" width="1280" height="568">
-                    </picture>
                 </div>
             </li>
 
+            <li class="cs-item">
+                <div class="cs-img">
+                    <img src="/assets/images/8.jpg" alt="Handicap Double Bed">
+                </div>
+                <div class="cs-card-content">
+                    <h3>Handicap Double Bed</h3>
+                    <p>
+                        Features 2 Queen beds and is designed for all mobility levels to ensure a comfortable, inclusive experience.
+                        <br><br><strong>Accommodates: 2</strong>
+                    </p>
+                </div>
+            </li>
 
-         
-
-
-
-             
-             <li class="cs-item">
-                <div class="cs-link">
-                     <h3 class="cs-title" style="color: white; font-size: 34px;">Handicap Double Bed</h3>
-                     <p class="cs-item-p">
-                        An accessible motel room has 2 Queen beds that can be used and enjoyed by everyone, no matter their degree of mobility and room is meticulously designed to meet the needs of individuals with disabilities to ensuring their travel experiences are as seamless and barrier-free as possible.
-                         <BR><BR><b>Accommodates:
-                             2</b>
-                     </p>
-                     <!--Backgorund Image-->
-                     <picture class="cs-background">
-                         <!--Mobile Image-->
-                         <source media="(max-width: 600px)" srcset="/assets/images/8.jpg">
-                         <!--Tablet and above Image-->
-                         <source media="(min-width: 601px)" srcset="/assets/images/8.jpg">
-                         <img loading="lazy" decoding="async" src="/assets/images/8.jpg" alt="person" width="1280" height="568">
-                     </picture>
-                 </div>
-             </li>
-
-
-
-             <li class="cs-item">
-                <div class="cs-link">
-                     <h3 class="cs-title" style="color: white; font-size: 34px;">Super King Bed</h3>
-                     <p class="cs-item-p">
-                        This spacious room has a jacuzzi tub next to the bed, queen-sized beds, a microwave, a mini-fridge, and a large bathroom.                         <BR><BR><b>Accommodates:
-                             2</b>
-                     </p>
-                     <!--Backgorund Image-->
-                     <picture class="cs-background">
-                         <!--Mobile Image-->
-                         <source media="(max-width: 600px)" srcset="/assets/images/9.jpg">
-                         <!--Tablet and above Image-->
-                         <source media="(min-width: 601px)" srcset="/assets/images/9.jpg">
-                         <img loading="lazy" decoding="async" src="/assets/images/9.jpg" alt="person" width="1280" height="568">
-                     </picture>
-                 </div>
-             </li>
-
-
-
-
-
-
-
+            <li class="cs-item">
+                <div class="cs-img">
+                    <img src="/assets/images/9.jpg" alt="Super King Bed">
+                </div>
+                <div class="cs-card-content">
+                    <h3>Super King Bed</h3>
+                    <p>
+                        Spacious and relaxing, this room includes a jacuzzi, queen beds, microwave, mini-fridge, and a large bathroom.
+                        <br><br><strong>Accommodates: 2</strong>
+                    </p>
+                </div>
+            </li>
         </ul>
+
         {% include 'components/cta_button.html' %}
     </div>
-    <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
+
     <svg class="cs-wave" width="1920" height="179" viewBox="0 0 1920 179" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 179V91.3463C1835.33 91.3463 1715.47 76.615 1549.2 32.9521C1299.48 -32.3214 1132.77 12.1006 947.32 61.5167C810.762 97.9044 664.042 137 466.533 137C331.607 137 256.468 123.447 188.082 111.113C130.974 100.812 78.5746 91.3609 0 91.3609V179H1920Z" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M1920 179V91.3463C1835.33 91.3463 1715.47 76.615 1549.2 32.9521C1299.48 -32.3214 1132.77 12.1006 947.32 61.5167C810.762 97.9044 664.042 137 466.533 137C331.607 137 256.468 123.447 188.082 111.113C130.974 100.812 78.5746 91.3609 0 91.3609V179H1920Z"
+            fill="white" />
     </svg>
 </section>
-                                
