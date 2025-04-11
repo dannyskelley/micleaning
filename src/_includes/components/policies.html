@@ -1,0 +1,401 @@
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+
+<style>
+    /*-- -------------------------- -->
+<---          Banner            -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #banner-850 {
+    /* 175px - 260px top */
+    padding: clamp(10.9375rem, 20vw, 16.25rem) 1rem clamp(6.25rem, 14vw, 12vw);
+    /* clips svg wave from causing overflow issues */
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #banner-850 .cs-container {
+    text-align: center;
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #banner-850 .cs-int-title {
+    /* 39px - 61px */
+    font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+    position: relative;
+  }
+  #banner-850 .cs-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #banner-850 .cs-background:before {
+    /* background color overlay */
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #1a1a1a;
+    opacity: 0.64;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #banner-850 .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* Makes img tag act as a background image */
+    object-fit: cover;
+  }
+  #banner-850 .cs-wave {
+    /* we're stretching the svg wider than the viewport so it's taller and has more of a presence */
+    width: 48rem;
+    height: auto;
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -1px;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #banner-850 .cs-background:before {
+    opacity: 1;
+    background: linear-gradient(90.01deg, rgba(0, 0, 0, 0.9) 16.86%, rgba(0, 0, 0, 0) 100%);
+  }
+  #banner-850 .cs-wave {
+    width: 100%;
+    left: 0;
+    transform: none;
+  }
+}
+
+/*-- -------------------------- -->
+<---        Content Page        -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #content-page-850 {
+    padding: var(--sectionPadding);
+    padding-top: 30px;
+    background-color: #fff;
+    /* clips the wave background from causing overflow issues when it goes off screen */
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #content-page-850 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+  }
+  #content-page-850 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 39.375rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #content-page-850 h2,
+  #content-page-850 h3,
+  #content-page-850 h4,
+  #content-page-850 h5,
+  #content-page-850 h6 {
+    font-weight: 700;
+    text-align: inherit;
+    margin: 0 0 1rem 0;
+    color: var(--secondary);
+  }
+  #content-page-850 h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+  #content-page-850 h3 {
+    font-size: 1.5rem;
+    color: black;
+    margin-top: 50px;
+  }
+  #content-page-850 h4,
+  #content-page-850 h5,
+  #content-page-850 h6 {
+    font-size: 1.25rem;
+  }
+  #content-page-850 .cs-button-solid {
+    margin-bottom: 2rem;
+  }
+  #content-page-850 .cs-no-margin {
+    margin: 0;
+  }
+  #content-page-850 .cs-color {
+    color: var(--primary);
+  }
+  #content-page-850 p {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    margin: 0 0 1rem 0;
+    color: var(--bodyTextColor);
+  }
+  #content-page-850 p:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #content-page-850 p a {
+    font-size: inherit;
+    line-height: inherit;
+    text-decoration: underline;
+    color: var(--primary);
+  }
+  #content-page-850 ol,
+  #content-page-850 ul {
+    padding-left: 1.5rem;
+    margin: 0 0 2rem 0;
+    color: var(--bodyTextColor);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #content-page-850 ul li {
+    list-style: none;
+    color: inherit;
+    position: relative;
+  }
+  #content-page-850 ul li:before {
+    /* custom list bullet */
+    content: "";
+    width: 3px;
+    height: 3px;
+    background: currentColor;
+    opacity: 1;
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    top: 0.625rem;
+    left: -0.75rem;
+  }
+  #content-page-850 img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  #content-page-850 .cs-image-group {
+    width: 50%;
+    max-width: 33.875rem;
+    display: none;
+    position: relative;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  #content-page-850 .cs-picture {
+    width: 100%;
+    /* 300px - 520px */
+    height: clamp(18.75rem, 40vw, 32.5rem);
+    box-shadow: 0px 3.3478px 50.2169px rgba(0, 0, 0, 0.16);
+    /* 125px - 200px */
+    border-radius: clamp(7.8125rem, 15vw, 12.5rem) 0 clamp(7.8125rem, 15vw, 12.5rem) 0;
+    /* prevents border from affecting height and width */
+    box-sizing: border-box;
+    /* clips img tag corners */
+    overflow: hidden;
+    display: block;
+    position: relative;
+  }
+  #content-page-850 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    /* makes it act like a background image */
+    object-fit: cover;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #content-page-850 .cs-container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  #content-page-850 .cs-content {
+    flex: none;
+    width: 60%;
+    /* sends it to the right in the 2nd position */
+    order: 2;
+  }
+  #content-page-850 .cs-image-group {
+    display: flex;
+  }
+}
+                                
+</style>
+
+<div id="banner-850">
+    <div class="cs-container">
+        <span class="cs-int-title">Hotel Policies & House Rules</span>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background" aria-hidden="true">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/slider1.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/slider1.jpg">
+        <img loading="lazy" decoding="async" src="/assets/images/slider1.jpg" alt="hotel" width="1280" height="568">
+    </picture>
+    <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
+    <svg class="cs-wave" width="1920" height="179" viewBox="0 0 1920 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 179V91.3463C1835.33 91.3463 1715.47 76.615 1549.2 32.9521C1299.48 -32.3214 1132.77 12.1006 947.32 61.5167C810.762 97.9044 664.042 137 466.533 137C331.607 137 256.468 123.447 188.082 111.113C130.974 100.812 78.5746 91.3609 0 91.3609V179H1920Z" fill="white"/>
+    </svg>
+</div>
+
+<!-- ============================================ -->
+<!--                 Content Page                 -->
+<!-- ============================================ -->
+
+<!-- ============================================ 
+    This Stitch is used for content heavy interior pages
+    that have no design or layout.  Often times these are 
+    content silos where you talk extensively about a topic
+    to educate your visitors and rank on Google for the 
+    content.  These are great for pages that have a TON
+    of content.  Design isn't important here, it's all 
+    about making the content accessible and easy to read.
+================================================= -->
+
+<section id="content-page-850">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-topper">📋 Guidelines for Your Stay</div>
+            <h1 class="cs-title">Chesaning Inn & Suites Policies & House Rules</h1>
+            <p>A minimum fee of $300.00 will be charged if these policies are not followed.</p>
+            
+            <p>We strive to provide our guests with an exceptionally clean, safe, and friendly hotel experience. The following Motel Policy/House Rules have been established based on industry standards, management and operational procedures, and our personal experience of owning and operating the Chesaning Inn & Suites. These Motel Policy/House Rules are considered a part of our reservation agreement with you. As our hotel guest, by reading and signing our hotel registration you are agreeing to abide by all of our Motel Policy/House Rules, terms and conditions, and procedures. These Motel Policy/House Rules are presented here to help promote our guests' safety and enjoyment and to ensure that each guest is aware of the understandings between Chesaning Inn & Suites and the guest. Our Motel Policy/House Rules may change from time to time, so please check back often.</p>
+
+            <h3>SMOKING-FREE POLICY</h3>
+            <p>Chesaning Inn & Suites has been designated as a Smoking-Free place. A minimum fee of $300.00 will be charged if anyone is found at fault. For safety and to assure that our facility is not exposed to items or actions that create an odor which is unhealthy and objectionable to our guests and staff, and that is difficult to remove from the air, carpet, walls, and furniture we do not permit smoking tobacco, marijuana, illegal drugs, e-cigarettes, vape pens, vaping, cartridges containing the liquid of nicotine, hookahs, incense, cooking, cigars, candle burning, the use or diffusing of patchouli oil or other strong-smelling plant-based essential oils or synthetic products in our facility. Guests are encouraged to notify Front Desk staff immediately if they smell cigarette, marijuana, or other objectionable odors. This policy is not intended to stop people from smoking, but to regulate where they smoke and how it affects others. Chesaning Inn & Suites has many open spaces outside the building.</p>
+            
+            <p>Marijuana is prohibited at all times.</p>
+
+            <h3>CANDLE, INCENSE, ESSENTIAL OILS</h3>
+            <p>Candle, incense, essential oils (diffusing, vaporizing, etc.) are prohibited. These items and activities will be treated as smoking, a fine accessed, and the guest may be evicted with no refunds.</p>
+
+            <h3>NO-COOKING, COOKING APPLIANCES, COMBUSTIBLES, OR FIREWORKS</h3>
+            <p>The safety of our guests, staff, and this facility is extremely important to us. Preparation of food in guest rooms by any type of cooking appliances is prohibited. A minimum fee of $300.00 will be charged for cooking in a room, including, but not limited to coffee makers, hot plates, toaster ovens, water heaters, rice cookers, combustible, open flame, barbecue grill, burners, heating appliance, or any other item intended for cooking. Open fires, flames or cooking grills, either charcoal or gas, and fireworks are not allowed anywhere on motel property.</p>
+
+            <h3>GUARANTEED RESERVATIONS</h3>
+            <p>All reservations must be guaranteed with deposit account. Guests must be 18 years and older. We accept cash & most major credit cards. We do charge 50% deposit account at the time you make your reservations in order to guarantee and the other 50% at the check-in. Please make sure to receive a reservation confirmation number when you make a reservation. Reservations must be cancelled 48 hours, hotel time, prior to your arrival date, in order to avoid a one (1) room night, plus tax cancellation fee. Reservations will be held until 4:00 pm. the afternoon following your scheduled arrival date. If you have not checked in by that time, a NO-SHOW charge of one room night, plus tax will be charged to your deposit account and the balance of your reservations will be cancelled. Chesaning Inn & Suites is not responsible for weather conditions, personal emergencies, or schedule changes.</p>
+
+            <h3>CHECK-IN TIME: EARLY CHECK-IN/PRE-REGISTRATION</h3>
+            <p>Early check-in is offered based on availability. If you require a guaranteed check-in for arrival before 11.am, then Pre-Registration and payment are required. Please contact Front Desk staff directly to make reservations and complete a credit card authorization form prior to your arrival.</p>
+
+            <h3>CHECK-IN REQUIREMENTS</h3>
+            <p>Guests must be at least 18 years of age to check in at Chesaning Inn & Suites. In the interests of security and to prevent fraud, guests are required to confirm their identity by providing their valid government issued photo identification (State driver's license, passport, etc.) at check-in. A mean of payment in the name of the guest registration is also required. It is your responsibility to fully understand the manner in which your bank processes pre-authorizations and charges to the transfer.</p>
+
+            <h3>PAYMENT AT CHECK-IN</h3>
+            <p>We required full payment for the amount of your intended stay, plus tax at the check-in. It is your responsibility to be aware of how your bank handles all of your transactions, including the transfer fees.</p>
+
+            <h3>GUEST REGISTRATION</h3>
+            <p>We require valid contact information from the guest making the reservations including first and last name, address, phone number, and signature. The names of all guests occupying the room must be registered. Information regarding your license plate/car description is also gathered at check-in for security.</p>
+
+            <h3>CHECK-OUT TIME</h3>
+            <p>Room rental period expires at 11:00 a.m. Additional day charge, plus tax may apply for late checkout.</p>
+
+            <h3>CHECK-OUT PROCEDURE</h3>
+            <p>Check-out time is 11:00 a.m. Please check-out with Front Desk so that housekeeping may begin cleaning your room as soon as possible. If you require a later check-out, please contact Front Desk prior to the day of your departure and we will do our best to accommodate your request but it depends on availability. A charge may apply for late check-out.</p>
+
+            <h3>EARLY DEPARTURE</h3>
+            <p>Guests who check out of the hotel prior to their scheduled departure date are subject to NO REFUND.</p>
+
+            <h3>SPECIAL REQUESTS</h3>
+            <p>We will make every effort to honor special requests such as a specific room number, adjoining rooms, extra bed beds, etc. upon your arrival. All special requests are noted on reservations and we will do our best to accommodate. However, the availability of these items cannot be guaranteed in advance.</p>
+
+            <h3>PAYMENT</h3>
+            <p>All reservations and registration must be guaranteed with payment. All guests are required to present a valid means of payment.</p>
+
+            <h3>CHECKS AND CHECK CASHING</h3>
+            <p>We do only accept checks. We do not provide check cashing services.</p>
+
+            <h3>DEPOSITS AND GUARANTEES</h3>
+            <p>There is deposit required to make an individual room reservation. However, valid means of payment is required at the time of booking to guarantee the room and secure the reservation period.</p>
+
+            <h3>QUIET HOURS</h3>
+            <p>10:00 p.m. to 9 a.m. If you become aware of a disruptive guest, please contact Front Desk staff immediately by phone or in person. Televisions, voices, or other devices must be kept at a respectful low level at all times. Doors should be opened and closed quietly. No congregating or running in terraces or alleys.</p>
+
+            <h3>VISITORS</h3>
+            <p>No visitors after 10:00 p.m. Visitors must notify Front Desk upon their arrival. Visitors must be accompanied by the registered guest at all times. As a registered guest, you are responsible for your visitor at all times.</p>
+
+            <h3>CHILDREN</h3>
+            <p>Well behaved children of all ages are welcome. Children aged 4 and under stay for free when sharing a room with one or more paying adult(s), using existing bedding. As the parents, guardians, or chaperones of children you are personally and legally responsible for and must supervise them at all times. For safety reasons, please do not leave children unattended in guest rooms or allow them to roam the hotel property unsupervised. Children are not allowed in the general area without being accompanied and supervised by their parent/guardian/chaperone.</p>
+
+            <h3>MAXIMUM OCCUPANCY</h3>
+            <p>Room occupancy requirements are based on safety restrictions. Standard Room maximum occupancy is 3, A limited number of drawer beds is available upon request. Availability is on a first-come, first-served basis for all the rooms. If you exceed the maximum number of guests allowed, you will be asked to rent another guest-room for proper accommodations or vacate the motel.</p>
+
+            <h3>HOUSEKEEPING/ROOM INSPECTION</h3>
+            <p>Housekeeping is provided between the hours of 10 a.m.-2 p.m. Housekeeping may start as early as 6 a.m. during busy season. This is a SMOKING-FREE motel but only in the open spaces for the safety of everyone. Rooms are cleaned and inspected daily and a detailed log is maintained on each room and linen. Rooms are rented to guests in appropriate condition without any prohibited odor. Housekeeping and Front Desk staff are trained and skilled in identifying the odors from prohibited items. If our investigation concludes that you have smoked in your room, cooked, or brought a prohibited item into our facility, you will be fined, and evicted without any refund.</p>
+
+            <h3>DAMAGE AND/OR THEFT OF HOTEL PROPERTY</h3>
+            <p>You are liable for any damage howsoever caused (whether by the deliberate, negligent, or reckless act) to the room(s), motel's premises or property caused by you or any person in your party whether or not staying at the motel during your stay. Chesaning Inn & Suites reserves the right to require a minimum deposit of $50.00 as presented at registration and charge such amounts as it shall in its sole discretion deem necessary to compensate or make good the cost or expenses incurred or suffered by Chesaning Inn & Suites as a result of the aforesaid. Should this damage come to light after the guest has departed, we reserve the right and you hereby authorize us to charge your credit or debit card for any damage incurred to your room or the Motel property during your stay, including and without limitation for all property damage, missing or damaged items, smoking fee, cleaning fee, guest compensation, etc. We will make every effort to rectify any damage internally prior to contracting specialist to make the repairs, and therefore will make every effort to keep any costs that the guest would incur to a minimum.</p>
+
+            <h3>RIGHT TO REFUSE SERVICE</h3>
+            <p>Chesaning Inn & Suites is privately operated. We reserve the right to refuse service to anyone for any reason. Chesaning Inn & Suites has a zero-tolerance policy in which we will refuse to admit or refuse service or accommodation in our motel or may remove a person, without refund, who refuses to abide by the reasonable standards and policies established by the Chesaning Inn & Suites.</p>
+
+            <h3>CANCELLATION</h3>
+            <p>Chesaning Inn & Suites is not responsible for weather conditions, personal emergencies, or schedule changes. Reservations must be cancelled 48 hours motel time, prior to your arrival date, in order to avoid a one (1) night full room cancellation fee. If reservations are cancelled less than 48 hours before the arrival date, you will may be charged the full room charge plus taxes. If you are staying more than one (1) night, only the first night and taxes will be charged. If you cancel any reservation, you must obtain and save the cancellation notification.</p>
+
+            <h3>NO-SHOW CHARGES</h3>
+            <p>Failure to check in on the scheduled arrival date for a reservation guaranteed will result in a No-Show fee being charged to your deposit. You will only be charged the first night, one (1) night's full room rate plus taxes and the balance of the reservation will be cancelled.</p>
+
+            <h3>TERMS & CONDITIONS</h3>
+            <p>Chesaning Inn & Suites makes its best efforts to ensure that all the information that appears on its website is accurate. However, no warranty, expressed or implied, is given that the information provided on this website is error-free. Chesaning Inn & Suites does not accept liability for any errors and/or omissions and reserves the right to change the information published at any time and without notice.</p>
+
+            <h3>CHANGES OR MODIFICATION TO THE MOTEL POLICY/HOUSE RULES</h3>
+            <p>Chesaning Inn & Suites reserves the right to amend, modify, change, cancel, vary or add to these Motel Policies/House Rules or the arrangements and content featured on our Motel website at any time without prior notice. Please check our website regularly for updates to Motel Policy/House Rules. Any modification to these Motel Policy/House Rules that occurs before your departure is considered a part of your reservations agreement with us. A copy of these Motel Policy/House Rules is located on our website, in the Guest Room Notebook, and available from Front Desk staff upon request.</p>
+        </div>
+        <div class="cs-image-group">
+            <!--Top Picture-->
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="/assets/images/1.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/1.jpg">
+                <img decoding="async" src="/assets/images/1.jpg" alt="Hotel Lobby" width="542" height="520" aria-hidden="true">
+            </picture>
+            <!--Top Picture-->
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="/assets/images/2.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/2.jpg">
+                <img decoding="async" src="/assets/images/2.jpg" alt="Hotel Room" width="542" height="520" aria-hidden="true">
+            </picture>
+        </div>
+    </div>
+</section>
