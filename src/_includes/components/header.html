@@ -36,7 +36,7 @@ body,
             justify-content: center;
             align-items: center;
             z-index: 10;
-            
+           
             overflow: hidden;
            
         }
@@ -488,6 +488,9 @@ body,
 
     /* Desktop - 1024px */
     @media only screen and (min-width: 64rem) {
+       
+        
+         #cs-navigation .cs-container {margin-top: 50px;}
         #cs-navigation .cs-dropdown {
             position: relative;
         }
@@ -966,7 +969,7 @@ button {
 }
 
 body.scroll #cs-navigation .cs-logo {
-    max-width: 200px;
+    max-width: 150px;
 }
 
 /* Mobile - 1023px */
@@ -1534,10 +1537,11 @@ body.scroll #cs-navigation .cs-logo {
     body.scroll #cs-navigation:after {
         height: 100%;
     }
-
+   
     #cs-navigation {
         width: 100%;
-        padding: 0;
+        padding: 20px 0px 0px 0px;
+        height: 90px;
         /* prevents padding and border from affecting height and width */
         box-sizing: border-box;
         background-color: white;
@@ -1777,6 +1781,10 @@ body.scroll #cs-navigation .cs-logo {
 
 /* Desktop - 1024px */
 @media only screen and (min-width: 1024px) {
+
+    #cs-navigation .cs-logo { position: absolute;
+            left: 0px;
+            top:-20px;}
     #cs-navigation .cs-drop-ul {
         overflow: visible;
     }
@@ -1819,7 +1827,7 @@ body.scroll #cs-navigation .cs-logo {
     <div class="cs-container">
         <!--Nav Logo-->
         <a href="/" class="cs-logo" aria-label="back to home">
-            <img src="/assets/images/logo.jpg" alt="logo" width="197"
+            <img src="/assets/images/logo.png" alt="logo" width="197"
                 height="43" aria-hidden="true" decoding="async">
         </a>
         <!--Navigation List-->
@@ -1922,7 +1930,7 @@ body.scroll #cs-navigation .cs-logo {
                     </li>
                     <li class="cs-li">
                         <a href="/about" class="cs-li-link {{ 'cs-active' if 'about' == page.fileSlug }}">
-                            Before You Visit
+                           Photos
                         </a>
                     </li>
              
@@ -1936,14 +1944,15 @@ body.scroll #cs-navigation .cs-logo {
                 <div class="cs-call">
 
 
-                    <span class="mobile-link mobile-link1" style="background-color: var(--primary); color:white;">Call Now To Schedule</span>
+                    <span class="mobile-link mobile-link1" style="background-color: var(--primary); color:white;">Get a Free Quote</span>
 
-                    <a class="mobile-link mobile-link2" href="tel:{{client.phoneForTel}}">(313) 395-2865</a></span>
+                    <a class="mobile-link mobile-link2" href="tel:{{client.phoneForTel}}">
+                        Call Now (586) 765-5028</a></span>
                 </div>
             </div>
         </nav>
         <a href="/contact" class="cs-button-10 cs-button-solid cs-nav-button" aria-label="read more about us">
-            313.395.2865
+            Call Now 586.765.5028
      
             </a>
         <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
