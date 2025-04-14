@@ -13,7 +13,7 @@
         margin: 0;
         padding: 0;
     }
-    .be-immersive-experience-overlay {top:90px}
+
     .mobile-link {
         font-family: "Poppins", Arial, sans-serif;
         background-color: white;
@@ -23,15 +23,14 @@
         text-decoration: none;
         padding: 10px;
         margin: 10px;
-        border-radius: 999px;
-        font-size: 1rem;
+        border-radius: 5px;
     }
 
     #cs-navigation .cs-logo {
-            width: auto;
+            width: 49.1875rem;
            
            
-            max-width:220px;
+            max-width: 15rem;
         
             padding: 0;
             display: flex;
@@ -54,18 +53,17 @@
     #cs-navigation:after {
         /* on scroll overlay */
         content: "";
-        width: 0%;
+        width: 100%;
         height: 100%;
-       
+        background:var(--headerScroll);
     }
-    #cs-navigation {background-color: #03428F;} 
 
     button {
         background-color: transparent;
         border: 0px;
     }
 
-    body.scroll #cs-navigation .cs-logo {max-width: 180px;}
+    body.scroll #cs-navigation .cs-logo {max-width: 200px;}
 
     
     /* Mobile - 1023px */
@@ -79,7 +77,7 @@
             text-align: center;
             background-color: var(--callBg);
             padding-bottom:180px;
-          
+            display: none;
         }
 
      
@@ -105,7 +103,7 @@
             width: 100%;
             /* prevents padding and border from affecting height and width */
             box-sizing: border-box;
-
+background-color: #fff;
             position: fixed;
             z-index: 10000;
         }
@@ -243,13 +241,13 @@
         #cs-navigation .cs-box {
             /* 24px - 28px */
             width: clamp(1.5rem, 2vw, 1.75rem);
-            height: 1rem;
+            height: 20px;
             position: relative;
         }
 
         #cs-navigation .cs-line {
             width: 100%;
-            height: 2px;
+            height: 3px;
             border-radius: 2px;
             background-color: #000;
             position: absolute;
@@ -295,7 +293,7 @@
             height: 100vh;
             padding-bottom: 3rem;
             opacity: 0;
-            background-color: var(--primaryDark);
+            background-color: white;
             box-shadow: inset rgba(0, 0, 0, 0.2) 0px 8px 24px;
             overflow: hidden;
             position: absolute;
@@ -378,9 +376,10 @@
             text-decoration: none;
             margin: 0;
             margin-bottom: 10px;
-            color: var(--bodyTextColorWhite);
+            color: #333;
             display: inline-block;
             position: relative;
+            font-weight: 900;
         }
 
         #cs-navigation .cs-li-link:before {
@@ -397,7 +396,7 @@
         }
 
         #cs-navigation .cs-li-link.cs-active {
-            color: var(--primary);
+            color: black;
         }
 
         #cs-navigation .cs-li-link.cs-active:before {
@@ -482,7 +481,7 @@
         #cs-navigation .cs-li-link.cs-drop-link {
             /* 14px - 16px */
             font-size: clamp(1.3rem, 2vw, 1.25rem);
-            color: #fff;
+            color: #333;
 
         }
     }
@@ -637,7 +636,6 @@
 
     /* Small Desktop - 1024px */
     @media only screen and (min-width: 64rem) {
-        .be-immersive-experience-overlay {top:80px}
         body.scroll #cs-navigation:after {
             height: 100%;
         }
@@ -647,9 +645,9 @@
             padding: 0;
             /* prevents padding and border from affecting height and width */
             box-sizing: border-box;
-
+background-color: white;
             position: fixed;
-            z-index: 999;
+            z-index: 10000;
         }
 
         #cs-navigation:after {
@@ -701,7 +699,7 @@
             justify-content: center;
             align-items: center;
             z-index: 100;
-           max-width: 200px;
+           
             overflow: hidden;
         }
 
@@ -740,12 +738,13 @@
 
         #cs-navigation .cs-li-link {
             /* 14px - 16px */
-            font-size: clamp(0.875rem, 0.6vw, 1rem);
+            font-size: clamp(1.2rem, 0.6vw, 1.4rem);
             line-height: 1.5em;
-            font-family: "Poppins", Arial, sans-serif;
-            text-transform: uppercase;
+           
+            text-transform: none;
+            font-weight:500;
             margin: 0;
-            color:var(--navLinkActive);
+            color: #333;
             display: block;
             position: relative;
             transition: color 0.3s;
@@ -765,7 +764,7 @@
         }
 
         #cs-navigation .cs-li-link:hover {
-            color:var(--primary);
+            color: var(--secondary);
         }
 
         #cs-navigation .cs-li-link:hover:before {
@@ -773,7 +772,7 @@
         }
 
         #cs-navigation .cs-li-link.cs-active {
-            color: var(--navLinkActive);
+            color: black;
         }
 
         #cs-navigation .cs-li-link.cs-active:before {
@@ -813,7 +812,6 @@
 
 /* Mobile - 1023px */
 @media only screen and (max-width: 1023px) {
-   
   #cs-navigation .cs-dropdown.cs-active .cs-drop-ul {
     visibility: visible;
     opacity: 1;
@@ -882,8 +880,6 @@
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 1024px) {
-
-    #cs-navigation {padding: 10px;}
   #cs-navigation .cs-drop-ul {
     overflow: visible;
   }
@@ -921,7 +917,7 @@
     <div class="cs-container">
         <!--Nav Logo-->
         <a href="/" class="cs-logo" aria-label="back to home">
-            <img src="/assets/images/logo.png" alt="logo" width="197"
+            <img src="/assets/images/logo.jpg" alt="logo" width="197"
                 height="43" aria-hidden="true" decoding="async">
         </a>
         <!--Navigation List-->
@@ -942,32 +938,92 @@
                             Home
                         </a>
                     </li>
-  
+          
+                    <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+                    <li class="cs-li cs-dropdown" tabindex="0">
+                        <span class="cs-li-link {{ 'cs-active' if 'services' == page.fileSlug }} cs-dropdown-toggle">
+                            Services
+                            <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                        </span>
+                        <ul class="cs-drop-ul">
+                            <a href="/services" class="cs-li-link cs-drop-link">
+                               View All Services
+                            </a>
+                            <li class="cs-drop-li cs-drop3-main">
+                                <span class="cs-li-link cs-drop-link ">
+                                    Commercial Services
+                                    <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                                </span>
+                                <!--Tertiary-->
+                                <ul class="cs-drop3">
+                                    <li class="cs-drop-li3">
+                                        <a href="/services/#tenant-office-renovations" class="cs-li-link cs-drop-link cs-drop-link3">Tenant Office Renovations</a>
+                                    </li>
+                                    <li class="cs-drop-li3">
+                                        <a href="/services/#commercial-remodeling" class="cs-li-link cs-drop-link cs-drop-link3">Commercial Remodeling</a>
+                                    </li>
+                                    <li class="cs-drop-li3">
+                                        <a href="/services/#commercial-design-build" class="cs-li-link cs-drop-link cs-drop-link3">New Commercial Design Build</a>
+                                    </li>
+                                    <li class="cs-drop-li3">
+                                        <a href="/services/#building-maintenance-and-property-management-services" class="cs-li-link cs-drop-link cs-drop-link3">Building Maintenance</a>
+                                    </li>
+                        
+
+                                    <li class="cs-drop-li3">
+                                        <a href="/services/#mobile-welding-services" class="cs-li-link cs-drop-link cs-drop-link3">Mobile Welding Services</a>
+                                    </li>
+                        
+                                </ul>
+                            </li>
+                            <li class="cs-drop-li cs-drop3-main">
+                                <span class="cs-li-link cs-drop-link">
+                                    Industrial Services
+                                    <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                                </span>
+                                <!--Tertiary-->
+                                <ul class="cs-drop3">
+                                    <li class="cs-drop-li3">
+                                        <a href="/services/#industrial-design-build" class="cs-li-link cs-drop-link cs-drop-link3">Industrial Design Build</a>
+                                    </li>
+                                 
+                                </ul>
+                            </li>
+                            <li class="cs-drop-li cs-drop3-main">
+                                <span class="cs-li-link cs-drop-link">
+                                    Residential Services
+                                    <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                                </span>
+                                <!--Tertiary-->
+                                <ul class="cs-drop3">
+                                    <li class="cs-drop-li3">
+                                        <a href="/services/#tile-and-paint" class="cs-li-link cs-drop-link cs-drop-link3">Tile & Paint</a>
+                                    </li>
+                                    <li class="cs-drop-li3">
+                                        <a href="/services/#electrical-upgrades-and-light-plumbing" class="cs-li-link cs-drop-link cs-drop-link3">Electrical Upgrades & Light Plumbing</a>
+                                    </li>
+                                    <li class="cs-drop-li3">
+                                        <a href="/services/#concrete-staircase-wood-graining" class="cs-li-link cs-drop-link cs-drop-link3">Concrete Staircase Wood Graining</a>
+                                    </li>
+                                    <li class="cs-drop-li3">
+                                        <a href="/services/#vinyl-cabinet-wrapping-and-wallpaper-installation" class="cs-li-link cs-drop-link cs-drop-link3">Vinyl Cabinet Wrapping &<BR> Wallpaper Installation</a>
+                                    </li>
+                   
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
                     <li class="cs-li">
-                        <a href="/rooms" class="cs-li-link {{ 'cs-active' if 'rooms' == page.fileSlug }}">
-                           Rooms
+                        <a href="/about" class="cs-li-link {{ 'cs-active' if 'about' == page.fileSlug }}">
+                            About Us
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/amenities" class="cs-li-link {{ 'cs-active' if 'amenities' == page.fileSlug }}">
-                            Amenities
+                        <a href="/about" class="cs-li-link {{ 'cs-active' if 'about' == page.fileSlug }}">
+                            Before You Visit
                         </a>
                     </li>
-                    <li class="cs-li">
-                        <a href="/photos" class="cs-li-link {{ 'cs-active' if 'photos' == page.fileSlug }}">
-                            Photos
-                        </a>
-                    </li>
-                    <li class="cs-li">
-                        <a href="/area" class="cs-li-link {{ 'cs-active' if 'area' == page.fileSlug }}">
-                            Area
-                        </a>
-                    </li>
-                    <li class="cs-li">
-                        <a href="/policies" class="cs-li-link {{ 'cs-active' if 'policies' == page.fileSlug }}">
-                           Policies
-                        </a>
-                    </li>
+             
                     <li class="cs-li">
                         <a href="/contact" class="cs-li-link {{ 'cs-active' if 'contact' == page.fileSlug }}">
                            Contact 
@@ -977,24 +1033,18 @@
                 </ul>
                 <div class="cs-call">
 
-                    <button class="mobile-link mobile-link1" style="width:95%;border:5px solid #fff; background-color: var(--primary); color:black; padding: 15px 40px; line-height: 28px;" data-be-url="https://us2.cloudbeds.com/reservation/GaW79p"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle ; margin-right:10px">
-                        <g id="calendar ">
-                        <path id="Vector" d="M24 38C24.3956 38 24.7822 37.8827 25.1111 37.6629C25.44 37.4432 25.6964 37.1308 25.8478 36.7654C25.9991 36.3999 26.0387 35.9978 25.9616 35.6098C25.8844 35.2219 25.6939 34.8655 25.4142 34.5858C25.1345 34.3061 24.7781 34.1156 24.3902 34.0384C24.0022 33.9613 23.6001 34.0009 23.2346 34.1522C22.8692 34.3036 22.5568 34.56 22.3371 34.8889C22.1173 35.2178 22 35.6044 22 36C22 36.5304 22.2107 37.0391 22.5858 37.4142C22.9609 37.7893 23.4696 38 24 38ZM34 38C34.3956 38 34.7822 37.8827 35.1111 37.6629C35.44 37.4432 35.6964 37.1308 35.8478 36.7654C35.9991 36.3999 36.0387 35.9978 35.9616 35.6098C35.8844 35.2219 35.6939 34.8655 35.4142 34.5858C35.1345 34.3061 34.7781 34.1156 34.3902 34.0384C34.0022 33.9613 33.6001 34.0009 33.2346 34.1522C32.8692 34.3036 32.5568 34.56 32.3371 34.8889C32.1173 35.2178 32 35.6044 32 36C32 36.5304 32.2107 37.0391 32.5858 37.4142C32.9609 37.7893 33.4696 38 34 38ZM34 30C34.3956 30 34.7822 29.8827 35.1111 29.6629C35.44 29.4432 35.6964 29.1308 35.8478 28.7654C35.9991 28.3999 36.0387 27.9978 35.9616 27.6098C35.8844 27.2219 35.6939 26.8655 35.4142 26.5858C35.1345 26.3061 34.7781 26.1156 34.3902 26.0384C34.0022 25.9613 33.6001 26.0009 33.2346 26.1522C32.8692 26.3036 32.5568 26.56 32.3371 26.8889C32.1173 27.2178 32 27.6044 32 28C32 28.5304 32.2107 29.0391 32.5858 29.4142C32.9609 29.7893 33.4696 30 34 30ZM24 30C24.3956 30 24.7822 29.8827 25.1111 29.6629C25.44 29.4432 25.6964 29.1308 25.8478 28.7654C25.9991 28.3999 26.0387 27.9978 25.9616 27.6098C25.8844 27.2219 25.6939 26.8655 25.4142 26.5858C25.1345 26.3061 24.7781 26.1156 24.3902 26.0384C24.0022 25.9613 23.6001 26.0009 23.2346 26.1522C22.8692 26.3036 22.5568 26.56 22.3371 26.8889C22.1173 27.2178 22 27.6044 22 28C22 28.5304 22.2107 29.0391 22.5858 29.4142C22.9609 29.7893 23.4696 30 24 30ZM38 6H36V4C36 3.46957 35.7893 2.96086 35.4142 2.58579C35.0391 2.21071 34.5304 2 34 2C33.4696 2 32.9609 2.21071 32.5858 2.58579C32.2107 2.96086 32 3.46957 32 4V6H16V4C16 3.46957 15.7893 2.96086 15.4142 2.58579C15.0391 2.21071 14.5304 2 14 2C13.4696 2 12.9609 2.21071 12.5858 2.58579C12.2107 2.96086 12 3.46957 12 4V6H10C8.4087 6 6.88258 6.63214 5.75736 7.75736C4.63214 8.88258 4 10.4087 4 12V40C4 41.5913 4.63214 43.1174 5.75736 44.2426C6.88258 45.3679 8.4087 46 10 46H38C39.5913 46 41.1174 45.3679 42.2426 44.2426C43.3679 43.1174 44 41.5913 44 40V12C44 10.4087 43.3679 8.88258 42.2426 7.75736C41.1174 6.63214 39.5913 6 38 6ZM40 40C40 40.5304 39.7893 41.0391 39.4142 41.4142C39.0391 41.7893 38.5304 42 38 42H10C9.46957 42 8.96086 41.7893 8.58579 41.4142C8.21071 41.0391 8 40.5304 8 40V22H40V40ZM40 18H8V12C8 11.4696 8.21071 10.9609 8.58579 10.5858C8.96086 10.2107 9.46957 10 10 10H12V12C12 12.5304 12.2107 13.0391 12.5858 13.4142C12.9609 13.7893 13.4696 14 14 14C14.5304 14 15.0391 13.7893 15.4142 13.4142C15.7893 13.0391 16 12.5304 16 12V10H32V12C32 12.5304 32.2107 13.0391 32.5858 13.4142C32.9609 13.7893 33.4696 14 34 14C34.5304 14 35.0391 13.7893 35.4142 13.4142C35.7893 13.0391 36 12.5304 36 12V10H38C38.5304 10 39.0391 10.2107 39.4142 10.5858C39.7893 10.9609 40 11.4696 40 12V18ZM14 30C14.3956 30 14.7822 29.8827 15.1111 29.6629C15.44 29.4432 15.6964 29.1308 15.8478 28.7654C15.9991 28.3999 16.0387 27.9978 15.9616 27.6098C15.8844 27.2219 15.6939 26.8655 15.4142 26.5858C15.1345 26.3061 14.7781 26.1156 14.3902 26.0384C14.0022 25.9613 13.6001 26.0009 13.2346 26.1522C12.8692 26.3036 12.5568 26.56 12.3371 26.8889C12.1173 27.2178 12 27.6044 12 28C12 28.5304 12.2107 29.0391 12.5858 29.4142C12.9609 29.7893 13.4696 30 14 30ZM14 38C14.3956 38 14.7822 37.8827 15.1111 37.6629C15.44 37.4432 15.6964 37.1308 15.8478 36.7654C15.9991 36.3999 16.0387 35.9978 15.9616 35.6098C15.8844 35.2219 15.6939 34.8655 15.4142 34.5858C15.1345 34.3061 14.7781 34.1156 14.3902 34.0384C14.0022 33.9613 13.6001 34.0009 13.2346 34.1522C12.8692 34.3036 12.5568 34.56 12.3371 34.8889C12.1173 35.2178 12 35.6044 12 36C12 36.5304 12.2107 37.0391 12.5858 37.4142C12.9609 37.7893 13.4696 38 14 38Z" fill="#000"></path>
-                        </g>
-                        </svg>Book Now</button>
+
+                    <a class="mobile-link mobile-link1" style="background-color: var(--primary);" href="sms:{{client.phoneForTel}}">Send us a
+                        text</a>
 
                     <a class="mobile-link mobile-link2" href="tel:{{client.phoneForTel}}">Give us a call</a>
                 </div>
             </div>
         </nav>
-
-        
-        <button class="cs-button-10 cs-button-solid cs-nav-button" style="background-color: var(--primary); color:black" data-be-url="https://us2.cloudbeds.com/reservation/GaW79p"><svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle ; margin-right:10px">
-            <g id="calendar ">
-            <path id="Vector" d="M24 38C24.3956 38 24.7822 37.8827 25.1111 37.6629C25.44 37.4432 25.6964 37.1308 25.8478 36.7654C25.9991 36.3999 26.0387 35.9978 25.9616 35.6098C25.8844 35.2219 25.6939 34.8655 25.4142 34.5858C25.1345 34.3061 24.7781 34.1156 24.3902 34.0384C24.0022 33.9613 23.6001 34.0009 23.2346 34.1522C22.8692 34.3036 22.5568 34.56 22.3371 34.8889C22.1173 35.2178 22 35.6044 22 36C22 36.5304 22.2107 37.0391 22.5858 37.4142C22.9609 37.7893 23.4696 38 24 38ZM34 38C34.3956 38 34.7822 37.8827 35.1111 37.6629C35.44 37.4432 35.6964 37.1308 35.8478 36.7654C35.9991 36.3999 36.0387 35.9978 35.9616 35.6098C35.8844 35.2219 35.6939 34.8655 35.4142 34.5858C35.1345 34.3061 34.7781 34.1156 34.3902 34.0384C34.0022 33.9613 33.6001 34.0009 33.2346 34.1522C32.8692 34.3036 32.5568 34.56 32.3371 34.8889C32.1173 35.2178 32 35.6044 32 36C32 36.5304 32.2107 37.0391 32.5858 37.4142C32.9609 37.7893 33.4696 38 34 38ZM34 30C34.3956 30 34.7822 29.8827 35.1111 29.6629C35.44 29.4432 35.6964 29.1308 35.8478 28.7654C35.9991 28.3999 36.0387 27.9978 35.9616 27.6098C35.8844 27.2219 35.6939 26.8655 35.4142 26.5858C35.1345 26.3061 34.7781 26.1156 34.3902 26.0384C34.0022 25.9613 33.6001 26.0009 33.2346 26.1522C32.8692 26.3036 32.5568 26.56 32.3371 26.8889C32.1173 27.2178 32 27.6044 32 28C32 28.5304 32.2107 29.0391 32.5858 29.4142C32.9609 29.7893 33.4696 30 34 30ZM24 30C24.3956 30 24.7822 29.8827 25.1111 29.6629C25.44 29.4432 25.6964 29.1308 25.8478 28.7654C25.9991 28.3999 26.0387 27.9978 25.9616 27.6098C25.8844 27.2219 25.6939 26.8655 25.4142 26.5858C25.1345 26.3061 24.7781 26.1156 24.3902 26.0384C24.0022 25.9613 23.6001 26.0009 23.2346 26.1522C22.8692 26.3036 22.5568 26.56 22.3371 26.8889C22.1173 27.2178 22 27.6044 22 28C22 28.5304 22.2107 29.0391 22.5858 29.4142C22.9609 29.7893 23.4696 30 24 30ZM38 6H36V4C36 3.46957 35.7893 2.96086 35.4142 2.58579C35.0391 2.21071 34.5304 2 34 2C33.4696 2 32.9609 2.21071 32.5858 2.58579C32.2107 2.96086 32 3.46957 32 4V6H16V4C16 3.46957 15.7893 2.96086 15.4142 2.58579C15.0391 2.21071 14.5304 2 14 2C13.4696 2 12.9609 2.21071 12.5858 2.58579C12.2107 2.96086 12 3.46957 12 4V6H10C8.4087 6 6.88258 6.63214 5.75736 7.75736C4.63214 8.88258 4 10.4087 4 12V40C4 41.5913 4.63214 43.1174 5.75736 44.2426C6.88258 45.3679 8.4087 46 10 46H38C39.5913 46 41.1174 45.3679 42.2426 44.2426C43.3679 43.1174 44 41.5913 44 40V12C44 10.4087 43.3679 8.88258 42.2426 7.75736C41.1174 6.63214 39.5913 6 38 6ZM40 40C40 40.5304 39.7893 41.0391 39.4142 41.4142C39.0391 41.7893 38.5304 42 38 42H10C9.46957 42 8.96086 41.7893 8.58579 41.4142C8.21071 41.0391 8 40.5304 8 40V22H40V40ZM40 18H8V12C8 11.4696 8.21071 10.9609 8.58579 10.5858C8.96086 10.2107 9.46957 10 10 10H12V12C12 12.5304 12.2107 13.0391 12.5858 13.4142C12.9609 13.7893 13.4696 14 14 14C14.5304 14 15.0391 13.7893 15.4142 13.4142C15.7893 13.0391 16 12.5304 16 12V10H32V12C32 12.5304 32.2107 13.0391 32.5858 13.4142C32.9609 13.7893 33.4696 14 34 14C34.5304 14 35.0391 13.7893 35.4142 13.4142C35.7893 13.0391 36 12.5304 36 12V10H38C38.5304 10 39.0391 10.2107 39.4142 10.5858C39.7893 10.9609 40 11.4696 40 12V18ZM14 30C14.3956 30 14.7822 29.8827 15.1111 29.6629C15.44 29.4432 15.6964 29.1308 15.8478 28.7654C15.9991 28.3999 16.0387 27.9978 15.9616 27.6098C15.8844 27.2219 15.6939 26.8655 15.4142 26.5858C15.1345 26.3061 14.7781 26.1156 14.3902 26.0384C14.0022 25.9613 13.6001 26.0009 13.2346 26.1522C12.8692 26.3036 12.5568 26.56 12.3371 26.8889C12.1173 27.2178 12 27.6044 12 28C12 28.5304 12.2107 29.0391 12.5858 29.4142C12.9609 29.7893 13.4696 30 14 30ZM14 38C14.3956 38 14.7822 37.8827 15.1111 37.6629C15.44 37.4432 15.6964 37.1308 15.8478 36.7654C15.9991 36.3999 16.0387 35.9978 15.9616 35.6098C15.8844 35.2219 15.6939 34.8655 15.4142 34.5858C15.1345 34.3061 14.7781 34.1156 14.3902 34.0384C14.0022 33.9613 13.6001 34.0009 13.2346 34.1522C12.8692 34.3036 12.5568 34.56 12.3371 34.8889C12.1173 35.2178 12 35.6044 12 36C12 36.5304 12.2107 37.0391 12.5858 37.4142C12.9609 37.7893 13.4696 38 14 38Z" fill="#000"></path>
-            </g>
-            </svg>Book Now</button>
-        <script src="https://us2.cloudbeds.com/widget/load/GaW79p/immersive"></script>
+        <a href="/contact" class="cs-button-10 cs-button-solid cs-nav-button" aria-label="read more about us">
+            313.395.2865
+     
+            </a>
         <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
         <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
             <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
@@ -1004,14 +1054,12 @@
 </header>
 
 <script>
+
 // Select all tertiary dropdown elements
 const tertiaryDrop = Array.from(document.querySelectorAll('#cs-navigation .cs-drop3-main'));
+
 // Select all anchor links within the navigation
 const anchorLinks = Array.from(document.querySelectorAll('#cs-navigation a[href*="#"]'));
-// Get the mobile book now button
-const mobileBookNowButton = document.querySelector('.mobile-link1');
-// Get the toggle button 
-const toggleButton = document.querySelector('.cs-toggle');
 
 // Handle tertiary dropdown toggles
 for (const item of tertiaryDrop) {
@@ -1029,12 +1077,12 @@ for (const link of anchorLinks) {
         if (parentDropdown) {
             parentDropdown.classList.remove('drop3-active');
         }
-       
+        
         // Close any other open dropdowns
         tertiaryDrop.forEach(dropdown => {
             dropdown.classList.remove('drop3-active');
         });
-       
+        
         // If there's a mobile menu element, close it
         const mobileMenu = document.querySelector('.cs-active'); // Adjust selector as needed
         if (mobileMenu) {
@@ -1042,26 +1090,5 @@ for (const link of anchorLinks) {
         }
     });
 }
-
-// Handle mobile book now button click
-if (mobileBookNowButton) {
-    mobileBookNowButton.addEventListener('click', () => {
-        // Close the mobile menu
-        const mobileMenu = document.querySelector('.cs-active');
-        if (mobileMenu) {
-            mobileMenu.classList.remove('cs-active');
-        }
-        
-        // Reset the hamburger toggle button
-        if (toggleButton) {
-            toggleButton.classList.remove('cs-active');
-        }
-        
-        // Remove the open class from html and body elements
-        document.documentElement.classList.remove('cs-open');
-        document.body.classList.remove('cs-open');
-    });
-}                
+                                
 </script>
-
-

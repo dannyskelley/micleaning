@@ -1,305 +1,383 @@
 <!-- ============================================ -->
-<!--                   Gallery                    -->
+<!--                    Hero                      -->
 <!-- ============================================ -->
 
-<section id="gallery-2235">
-  <div class="cs-container">
-      <div class="cs-content">
-          <div class="cs-flex-group">
-              <span class="cs-topper" data-aos="fade-down">Chesaning Inn & Suites</span>
-              <h2 class="cs-title" data-aos="fade-up">Sleep Easy. Stay Happy.</h2>
-          </div>
-
-          <div class="cs-text">
-            <p>Located in the heart of Chesaning, MI our family owned hotel has been welcoming guests for over 20 years. We offer free WiFi & pet friendly rooms. We also offer fireplace or Jacuzzi rooms, & affordable rates for weekly stays!
 
 
-            
-            </p>              </div>
-        
-      </div>
-      <DIV style="margin-top: -30px;">       
-      {% include 'components/cta_button.html' %}</DIV>   
-      <div class="cs-wrapper">
-          <div class="cs-slideshow">
-              <!-- Ensure that the the cs-slide you want to start on has the 'initial' class applied. The JS will take care of the rest -->
-              <picture class="cs-slide initial">
-                  <source media="(max-width: 600px)" srcset="/assets/images/slider1.jpg">
-                  <source media="(min-width: 601px)" srcset="/assets/images/slider1.jpg">
-                  <img loading="lazy" decoding="async" src="/assets/images/slider1.jpg" alt="formal dinner" width="380" height="271">
-              </picture>
-              <picture class="cs-slide">
-                <source media="(max-width: 600px)" srcset="/assets/images/slider2.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/slider2.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/slider2.jpg" alt="formal dinner" width="380" height="271">
-            </picture>
+<style>
 
 
-            <picture class="cs-slide">
-              <source media="(max-width: 600px)" srcset="/assets/images/slider3.jpg">
-              <source media="(min-width: 601px)" srcset="/assets/images/slider3.jpg">
-              <img loading="lazy" decoding="async" src="/assets/images/slider3.jpg" alt="formal dinner" width="380" height="271">
-          </picture>
 
-
-          <picture class="cs-slide">
-            <source media="(max-width: 600px)" srcset="/assets/images/slider4.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/slider4.jpg">
-            <img loading="lazy" decoding="async" src="/assets/images/slider4.jpg" alt="formal dinner" width="380" height="271">
-        </picture>
-        
-
-              <div class="cs-slideshow-button cs-slideshow-next"></div>
-              <div class="cs-slideshow-button cs-slideshow-prev"></div>
-          </div>
-      </div>
-
-      
-  </div>
-<DIV style="margin-top: 30px; text-align: center; background-color: rgba(255,255,255,.8); padding: 30px; border-radius: 12px; flex: none;">             <DIV class="cs-title" style="font-size: 32px; text-align: center; margin:auto; margin-bottom: 30px; ">24 Hr Front Desk</DIV
-<SPAN style="display:block;"><B> Check In:</B>
-
-  3:00 PM <BR> <B>Check Out</B>
-  
-  11:00 AM</SPAN></DIV>
-</section>
-
-  {% include 'components/2.html' %}
-
-
-</section>
-
-
-                              
-<Style>
-  /* ---------------------------------- */
-/*           Gallery                  */
-/* ---------------------------------- */
-
+  /*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #gallery-2235 {
+  #hero-1957 {
+    /* removed at Tablet */
+    min-height: 100dvh;
     padding: var(--sectionPadding);
-    padding-bottom: 0px;
-    background-color: #e1efff;
-    /*
-* Created with https://www.css-gradient.com
-* Gradient link: https://www.css-gradient.com/?c1=ffffff&c2=e1efff&gt=r&gd=dtt
-*/
-background: #FFFFFF;
-background: radial-gradient(at center top, #FFFFFF, #badbff);
+    /* 200px - 300px - leaving extra space for the navigation */
+    padding-top: clamp(12.5rem, 31.95vw, 18.75rem);
+    padding-right: clamp(1rem, 2.5vw, 1.25rem);
+    /* 16px - 20px */
+    padding-left: clamp(1rem, 2.5vw, 1.25rem);
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    z-index: 1;
   }
-  #gallery-2235 .cs-container {
+  #hero-1957 .cs-container {
     width: 100%;
-    max-width: 120rem;
-    margin: auto;
+    max-width: 80rem;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    /* 48px - 64px */
-    gap: clamp(3rem, 6vw, 4rem);
+    /* 60px - 180px */
+    gap: clamp(3.75rem, 13vw, 11.25rem);
   }
-  #gallery-2235 .cs-content {
+  #hero-1957 .cs-content {
     /* set text align to left if content needs to be left aligned */
     text-align: left;
     width: 100%;
-    max-width: 80rem;
+    max-width: 34.625rem;
     display: flex;
     flex-direction: column;
     /* centers content horizontally, set to flex-start to left align */
     align-items: flex-start;
   }
-  #gallery-2235 .cs-flex-group {
-    display: flex;
-    flex-direction: column;
-    /* prevents flexbox from squishing it */
-    flex: none;
+  #hero-1957 .cs-topper {
+    margin-bottom: 0.5rem;
+   
   }
-  #gallery-2235 .cs-topper {
-    color: var(--secondary);
+  #hero-1957 .cs-title {
+    /* 39px - 61px */
+    font-size: clamp(2.4375rem, 5.975vw, 3.8125rem);
+    margin-bottom: 1rem;
+    color: #fff;
   }
-  #gallery-2235 .cs-text {
-    max-width: none;
+  #hero-1957 .cs-text {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 1.95vw, 1.25rem);
+    /* 28px - 40px */
+    margin: 0 0 clamp(1.75rem, 2.5vw, 2.5rem) 0;
+    color: #fff;
   }
-  #gallery-2235 .cs-wrapper {
+  
+  #hero-1957 .cs-background {
     width: 100%;
-    overflow: hidden;
-  }
-  #gallery-2235 .cs-slideshow {
-    position: relative;
-    transform-style: preserve-3d;
-  }
-  #gallery-2235 .cs-slide {
-    width: 100%;
-    /* 340px - 840px */
-    height: clamp(21.25rem, 60vw, 52.5rem);
-
-    margin: auto;
-    opacity: 0;
+    height: 100%;
     display: block;
     position: absolute;
     top: 0;
-    z-index: 100;
-    transition: transform 0.3s, opacity 0.3s, z-index 0.3s;
-    /* classes applied by the JS file */
+    left: 0;
+    z-index: -2;
   }
-  #gallery-2235 .cs-slide img {
+  #hero-1957 .cs-background:before {
+    /* Overlay */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(359deg, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0) 56.87%);
+    /* prevents the cursor from interacting with it */
+    pointer-events: none;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #hero-1957 .cs-background img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  #gallery-2235 .cs-slide.initial,
-  #gallery-2235 .cs-slide.active {
-    opacity: 1;
-    position: relative;
-    z-index: 900;
-  }
-  #gallery-2235 .cs-slide.prev,
-  #gallery-2235 .cs-slide.next {
-    z-index: 800;
-  }
-  #gallery-2235 .cs-slide.prev {
-    transform: translateX(-100%);
-  }
-  #gallery-2235 .cs-slide.next {
-    transform: translateX(100%);
-  }
-  #gallery-2235 .cs-slideshow-button {
-    /* 36px - 80px */
-    width: clamp(2.25rem, 6vw, 5rem);
-    /* 36px - 80px */
-    height: clamp(2.25rem, 6vw, 5rem);
-    cursor: pointer;
-    border: 1px solid #fff;
-    border-radius: 50%;
+    /* makes the top of the image start at the top of the parent */
+    object-position: top;
     position: absolute;
-    top: 50%;
-    z-index: 1000;
-    transform: translateY(-50%);
-  }
-  #gallery-2235 .cs-slideshow-button::before {
-    content: "";
-    /* 20px - 64px */
-    width: clamp(1.25rem, 5vw, 4rem);
-    /* 20px - 64px */
-    height: clamp(1.25rem, 5vw, 4rem);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  #gallery-2235 .cs-slideshow-button.cs-slideshow-prev {
-    left: 1rem;
-  }
-  #gallery-2235 .cs-slideshow-button.cs-slideshow-prev::before {
-    background-image: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/slideshow-left.svg");
-  }
-  #gallery-2235 .cs-slideshow-button.cs-slideshow-next {
-    right: 1rem;
-  }
-  #gallery-2235 .cs-slideshow-button.cs-slideshow-next::before {
-    background-image: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/slideshow-right.svg");
+    top: 0;
+    left: 0;
   }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #gallery-2235 .cs-content {
-    flex-direction: row;
+  #hero-1957 {
+    min-height: auto;
+  }
+  #hero-1957 .cs-container {
+    align-items: flex-start;
+  }
+  #hero-1957 .cs-content {
+    text-align: left;
+    margin-left: 0;
+    align-items: flex-start;
+  }
+  #hero-1957 .cs-background:before {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 25.47%, rgba(0, 0, 0, 0) 90.01%);
+  }
+}
+/* Large Desktop Parallax Effect - 100px */
+@media only screen and (min-width: 100rem) {
+  #hero-1957 .cs-background {
+    background: url("/assets/images/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* creates the parallax effect */
+    background-attachment: fixed;
+  }
+  #hero-1957 .cs-background img {
+    display: none;
+  }
+}
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #services-1957 {
+    /* 16px - 20px */
+    padding: clamp(1rem, 2vw, 1.25rem);
+    position: relative;
+    z-index: 1;
+  }
+  #services-1957 .cs-container {
+    width: 100%;
+    max-width: 120rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 16px - 20px */
+    gap: clamp(1rem, 2vw, 1.25rem);
+  }
+  #services-1957 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    gap: clamp(1rem, 2.5vw, 1.25rem);
+  }
+  #services-1957 .cs-item {
+    text-align: left;
+    list-style: none;
+    width: 100%;
+    /* 280px - 337px */
+    min-height: clamp(17.5rem, 35vw, 21.0625rem);
+    margin: 0;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    padding: 0;
+    /* clips background image corners */
+    overflow: hidden;
+    box-shadow: 0px 12px 80px 0px rgba(26, 26, 26, 0.08);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: flex-end;
-    gap: 2.5rem;
+    align-items: flex-start;
+    grid-column: span 12;
+    grid-row: span 1;
+    position: relative;
+    z-index: 1;
   }
-  #gallery-2235 .cs-title {
-    margin-bottom: 0;
+  #services-1957 .cs-item:hover .cs-item-background img {
+    transform: scale(1.3);
   }
-  #gallery-2235 .cs-flex-group {
-    width: 55%;
+  #services-1957 .cs-link {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    /* 125px - 236px */
+    /* padding goes on the link, not the cs-item as is normal. We do this because we want the whole card to be hoverable. So we add the padding to the link tag to create the space inside the card. By adding the space inside the cs-link tag we can make the whole card hoverable since the padding is now contributing to the height and width of the link */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  #services-1957 .cs-icon-wrapper {
+    width: 3rem;
+    height: 3rem;
+    margin-left: auto;
+    background: #fff;
+    box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: none;
+  }
+  #services-1957 .cs-icon {
+    width: 2rem;
+    height: auto;
+  }
+  #services-1957 .cs-flex {
+    width: 100%;
+  }
+  #services-1957 .cs-topper {
+    margin-bottom: 0.5rem;
+  
+  }
+  #services-1957 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 19ch;
+    margin: 0 0 0.75rem 0;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  #services-1957 .cs-item-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #services-1957 .cs-item-background:before {
+    /* background color overlay */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 57.04%, rgba(0, 0, 0, 0.5) 87.88%);
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #services-1957 .cs-item-background img {
+    width: 100%;
+    height: 100%;
+    /* Makes img tag act as a background image */
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.6s, opacity 0.3s;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #services-1957 .cs-item {
+    grid-column: span 6;
+  }
+}
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #services-1957 .cs-item {
+    grid-column: span 3;
   }
 }
                                 
+</style>
 
+<section id="hero-1957">
+  <div class="cs-container">
+      <div class="cs-content">
+        <span class="cs-topper" style="color: #ffc334;">Quick, Convenient, & Compassionate</span>
+          <h1 class="cs-title" >Urgent Care Without the wait</h1>
+          
+          <p class="cs-text">25340 Van Born Rd, Dearborn Heights, MI 48125
 
-                                
-</Style>
+            <BR>
 
+              <B> (313) 395-2865</B>
+          </p>
+          <a href="" class="cs-button-solid">Call Now To Schedule</a>
+      </div>
+  </div>
+  <!-- Background Image, there's a background image in the CSS for the parallax effect you'll need to change as well if you swap out our images -->
+  <picture class="cs-background">
+      <source media="(max-width: 600px)" srcset="/assets/images/bgm.jpg">
+      <source media="(min-width: 601px)" srcset="/assets/images/bg.jpg">
+      <img decoding="async" src="/assets/images/bg.jpg" alt="healthcare professionals" width="1920" height="746" aria-hidden="true">
+  </picture>
+</section>
 
-<script>
-  class Slideshow {
-    constructor() {
-        // Initialize DOM elements for the slideshow
-        // Converts NodeList to Array for better method availability
-        this.slides = Array.from(document.querySelectorAll('.cs-slide'));
-        this.nextButton = document.querySelector('.cs-slideshow-next');
-        this.prevButton = document.querySelector('.cs-slideshow-prev');
+<!-- ============================================ -->
+<!--                   Services                   -->
+<!-- ============================================ -->
 
-        // Track the currently displayed slide and animation state
-        this.currentIndex = 0;
-        this.isMoving = false;
-
-        // Setup event listeners and initial slide positions
-        this.init();
-    }
-
-    init() {
-        // Attach click handlers for navigation, using optional chaining for null safety
-        this.nextButton?.addEventListener('click', () => this.moveSlide('next'));
-        this.prevButton?.addEventListener('click', () => this.moveSlide('prev'));
-
-        // Position slides in their starting configuration
-        this.updateSlideStates();
-    }
-
-    updateSlideStates() {
-        this.slides.forEach((slide, index) => {
-            // Clear existing position classes to prevent conflicts
-            slide.classList.remove('active', 'prev', 'next', 'initial');
-
-            // Apply appropriate positioning class based on slide's relation to current slide
-            if (index === this.currentIndex) {
-                slide.classList.add('active');
-            } else if (index === this.getAdjacentIndex('prev')) {
-                slide.classList.add('prev');
-            } else if (index === this.getAdjacentIndex('next')) {
-                slide.classList.add('next');
-            }
-        });
-    }
-
-    getAdjacentIndex(direction) {
-        const totalSlides = this.slides.length;
-        // Calculate the index of the next/previous slide with wrapping
-        // Using modulo to create circular navigation
-        if (direction === 'next') {
-            return (this.currentIndex + 1) % totalSlides;
-        } else {
-            return (this.currentIndex - 1 + totalSlides) % totalSlides;
-        }
-    }
-
-    moveSlide(direction) {
-        // Prevent animation overlap by checking if transition is in progress
-        if (this.isMoving) return;
-        this.isMoving = true;
-
-        // Update the current slide index based on navigation direction
-        this.currentIndex = this.getAdjacentIndex(direction);
-
-        // Apply new positioning classes to slides
-        this.updateSlideStates();
-
-        // Re-enable navigation after transition animation completes
-        setTimeout(() => {
-            this.isMoving = false;
-        }, 300); // Timeout should match CSS transition-duration
-    }
-}
-
-// Create slideshow instance once DOM is fully loaded
-document.addEventListener('DOMContentLoaded', () => {
-    new Slideshow();
-});
-                                
-</script>
+<section id="services-1957">
+  <div class="cs-container">
+      <ul class="cs-card-group">
+          <li class="cs-item">
+              <a href="" class="cs-link">
+                  <picture class="cs-icon-wrapper">
+                      <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-up-right-arrow.svg" alt="icon" width="32" height="32">
+                  </picture>
+                  <div class="cs-flex">
+                      <span class="cs-topper">Dental Care</span>
+                      <h3 class="cs-h3">Caring for Your Dental Implants</h3>
+                  </div>
+              </a>
+              <picture class="cs-item-background">
+                  <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dental-care.png">
+                  <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dental-care.png">
+                  <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/dental-care.png" alt="healthcare patient" width="455" height="337" aria-hidden="true">
+              </picture>
+          </li>
+          <li class="cs-item">
+              <a href="" class="cs-link">
+                  <picture class="cs-icon-wrapper">
+                      <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-up-right-arrow.svg" alt="icon" width="32" height="32">
+                  </picture>
+                  <div class="cs-flex">
+                      <span class="cs-topper">Skin Care</span>
+                      <h3 class="cs-h3">Revitalize Your Skin with Clinical Care</h3>
+                  </div>
+              </a>
+              <picture class="cs-item-background">
+                  <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/skin-care.png">
+                  <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/skin-care.png">
+                  <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/skin-care.png" alt="healthcare patient" width="455" height="337" aria-hidden="true">
+              </picture>
+          </li>
+          <li class="cs-item">
+              <a href="" class="cs-link">
+                  <picture class="cs-icon-wrapper">
+                      <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-up-right-arrow.svg" alt="icon" width="32" height="32">
+                  </picture>
+                  <div class="cs-flex">
+                      <span class="cs-topper">Cardio Care</span>
+                      <h3 class="cs-h3">Overall Checkup for Your Cardiac Health</h3>
+                  </div>
+              </a>
+              <picture class="cs-item-background">
+                  <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/cardio-care.png">
+                  <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/cardio-care.png">
+                  <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/cardio-care.png" alt="healthcare patient" width="455" height="337" aria-hidden="true">
+              </picture>
+          </li>
+          <li class="cs-item">
+              <a href="" class="cs-link">
+                  <picture class="cs-icon-wrapper">
+                      <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-up-right-arrow.svg" alt="icon" width="32" height="32">
+                  </picture>
+                  <div class="cs-flex">
+                      <span class="cs-topper">Eye Care</span>
+                      <h3 class="cs-h3">Eye Care Services for Children and Adults</h3>
+                  </div>
+              </a>
+              <picture class="cs-item-background">
+                  <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/eye-care.png">
+                  <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/eye-care.png">
+                  <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/eye-care.png" alt="healthcare patient" width="455" height="337" aria-hidden="true">
+              </picture>
+          </li>
+      </ul>
+  </div>
+</section>
+                              
