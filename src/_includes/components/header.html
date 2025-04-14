@@ -69,7 +69,7 @@ body,
     @media only screen and (max-width: 63.9375rem) {
         #cs-navigation .cs-call {
             position: fixed;
-            bottom: 0px; 
+            bottom: calc(7rem + env(safe-area-inset-bottom)); 
             left: 0px;
             right: 0px;
             z-index: 9999;
@@ -1033,10 +1033,9 @@ background-color: white;
                 <div class="cs-call">
 
 
-                    <a class="mobile-link mobile-link1" style="background-color: var(--primary);" href="sms:{{client.phoneForTel}}">Send us a
-                        text</a>
+                    <span class="mobile-link mobile-link1" style="background-color: var(--primary); color:white;">Call Now To Schedule</span>
 
-                    <a class="mobile-link mobile-link2" href="tel:{{client.phoneForTel}}">Give us a call</a>
+                    <a class="mobile-link mobile-link2" href="tel:{{client.phoneForTel}}"> (313) 395-2865</a></span>
                 </div>
             </div>
         </nav>
