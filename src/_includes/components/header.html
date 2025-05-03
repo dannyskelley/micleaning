@@ -26,35 +26,35 @@
     }
 
     #cs-navigation .cs-logo {
-            width: 49.1875rem;
-           
-           
-            max-width: 170px;
-        
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 10;
-           
-            overflow: hidden;
-           
-        }
+        width: 49.1875rem;
 
-        #cs-navigation .cs-logo img {
-            width: 100%;
-            height: 100%;
-            /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
-            object-fit: contain;
-            
-        }
+
+        max-width: 170px;
+
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+
+        overflow: hidden;
+
+    }
+
+    #cs-navigation .cs-logo img {
+        width: 100%;
+        height: 100%;
+        /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
+        object-fit: contain;
+
+    }
 
     #cs-navigation:after {
         /* on scroll overlay */
         content: "";
         width: 0%;
         height: 100%;
-        background:var(--headerScroll);
+        background: var(--headerScroll);
     }
 
     button {
@@ -62,30 +62,34 @@
         border: 0px;
     }
 
-    body.scroll #cs-navigation .cs-logo {max-width: 150px;}
+    body.scroll #cs-navigation .cs-logo {
+        max-width: 150px;
+    }
 
-    
+
     /* Mobile - 1023px */
     @media only screen and (max-width: 63.9375rem) {
         #cs-navigation .cs-call {
             position: fixed;
-            bottom: 100px; 
+            bottom: 100px;
             left: 0px;
             right: 0px;
             z-index: 9999;
             text-align: center;
             background-color: var(--callBg);
-            padding-bottom:180px;
+            padding-bottom: 180px;
         }
 
-     
-        body.scroll   #cs-navigation .cs-call {
 
-            bottom:0px;
+        body.scroll #cs-navigation .cs-call {
+
+            bottom: 0px;
         }
 
-        html.cs-open, body.cs-open {
-           overflow: hidden; height: 100%;
+        html.cs-open,
+        body.cs-open {
+            overflow: hidden;
+            height: 100%;
         }
 
         body.cs-open #cs-navigation:after {
@@ -135,7 +139,7 @@
 
         #cs-navigation .cs-top-bar {
             width: 100%;
-               background-color: var(--mobileNav);
+            background-color: var(--mobileNav);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -207,7 +211,7 @@
             align-items: center;
         }
 
-     
+
 
         #cs-navigation .cs-toggle {
             width: 3.5rem;
@@ -666,7 +670,7 @@
         #cs-navigation .cs-container {
             width: 100%;
             /* same height as the cs-ul-wrapper */
-            height:auto;
+            height: auto;
             max-width: 100%;
             margin: auto;
             padding: 0 1rem;
@@ -688,7 +692,7 @@
         }
 
         #cs-navigation .cs-logo {
-          
+
             /* margin-right auto pushes everything away from it to the right */
             margin: 0 auto 0 0;
             padding: 0;
@@ -696,13 +700,13 @@
             justify-content: center;
             align-items: center;
             z-index: 100;
-           
+
             overflow: hidden;
         }
 
         #cs-navigation .cs-logo img {
             width: 100%;
-           
+
             /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
             object-fit: contain;
         }
@@ -805,8 +809,7 @@
     <div class="cs-container">
         <!--Nav Logo-->
         <a href="/" class="cs-logo" aria-label="back to home">
-            <img src="/assets/images/logo.svg" alt="logo" width="197"
-                height="43" aria-hidden="true" decoding="async">
+            <img src="/assets/images/logo.svg" alt="logo" width="197" height="43" aria-hidden="true" decoding="async">
         </a>
         <!--Navigation List-->
         <nav class="cs-nav" role="navigation">
@@ -820,80 +823,158 @@
             </button>
             <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
             <div class="cs-ul-wrapper">
-                <ul id="cs-expanded" class="cs-ul">
-                    {% set navPages = collections.all | eleventyNavigation %}
-
-                    {# Loop through all pages with a eleventyNavigation in the frontmatter #}
-                    {% for entry in navPages %}
-
-                    {# Define a hasChild variable to make it easier to test what navigation items are have child
-                    dropdown pages #}
-                    {% set hasChild = entry.children.length %}
-
-                    {# Check the frontmatter for hideOnMobile/hideOnDesktop. Form a list of classes to be joined when
-                    the item is rendered #}
-                    {% set hideClasses = [] %}
-                    {% if entry.hideOnMobile %}
-                    {% set hideClasses = (hideClasses.push("cs-hide-on-mobile"), hideClasses) %}
-                    {% endif %}
-                    {% if entry.hideOnDesktop %}
-                    {% set hideClasses = (hideClasses.push("cs-hide-on-desktop"), hideClasses) %}
-                    {% endif %}
-
-                    {# If this page is a dropdown, give it the appropriate classes, icons and accessibility attributes
-                    #}
-                    <li class="cs-li {% if hasChild %} cs-dropdown {% endif %} {{ hideClasses | join(" ") }}">
-
-                        {# If the page has child dropdown pages, render it as a <button> tag with the appropriate
-                            dropdown HTML #}
-                            {% if hasChild %}
-
-                            {# Check to see if the user's current page is one of the child pages. If so, apply the
-                            cs-active class to the dropdown parent #}
-                            {% set activeClass = "" %}
-                            {% for child in entry.children %}
-                            {% if child.url == page.url %}
-                            {% set activeClass = "cs-active" %}
-                            {% endif %}
-                            {% endfor %}
-
-                            {# Render the <button> with the active class, dropdown icon and child links #}
-                                <button class="cs-li-link cs-dropdown-button {{ activeClass }}" aria-expanded="false"
-                                    aria-controls="dropdown-{{ entry.key }}" aria-label="dropdown-{{ entry.key }}">
-                                    {{ entry.key }}
-                                    <img class="cs-drop-icon" style="filter: brightness(0) invert(1);"
+                <ul class="cs-ul" id="cs-expanded">
+                    <li class="cs-li"><a href="/" class="cs-li-link cs-active">Home</a></li>
+                    <li class="cs-li cs-dropdown" tabindex="0"><span class="cs-li-link cs-dropdown-toggle">Services <img
+                                alt="dropdown icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg"
+                                decoding="async" height="15" width="15" class="cs-drop-icon" aria-hidden="true"></span>
+                        <ul class="cs-drop-ul"><a href="/services" class="cs-li-link cs-drop-link">View All Services</a>
+                            <li class="cs-drop-li cs-drop3-main"><span class="cs-li-link cs-drop-link">🚑 Emergency
+                                    Services <img alt="dropdown icon"
                                         src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg"
-                                        alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
-                                </button>
-
-                                {# Dropdowns have another ul/li set up within the parent li, which gets rendered in the
-                                same way as a normal link #}
-                                <ul class="cs-drop-ul" id="dropdown-{{ entry.key }}">
-                                    {% for child in entry.children %}
-                                    <li class="cs-drop-li">
-                                        <a href="{{ child.url }}" class="cs-li-link cs-drop-link">{{ child.key }}</a>
+                                        decoding="async" height="15" width="15" class="cs-drop-icon"
+                                        aria-hidden="true"></span>
+                                <ul class="cs-drop3">
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Adult &amp; Pediatric Urgent
+                                            Care Services</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Cold, Flu &amp; Viral
+                                            Symptoms</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Nausea, Vomiting &amp;
+                                            Diarrhea</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Ear, Nose &amp; Throat
+                                            Infections</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Dehydration &amp; IV
+                                            Therapy</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Management of Minor Burns</a>
                                     </li>
-                                    {% endfor %}
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Rashes &amp; Allergic
+                                            Reactions</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Asthma Treatments</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Migraine Treatment</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Laceration Repair &amp; Wound
+                                            Care</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Incision &amp; Drainage of
+                                            Abscesses</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Orthopedics</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Sprains &amp; Strains</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">School &amp; Sport
+                                            Physicals</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Auto Accidents</a></li>
                                 </ul>
-                                {% else %}
-                                {# Normal pages are rendered as <a> tags, in the normal way you'd expect #}
-                                    <a href="{{ entry.url }}"
-                                        class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}" {% if
-                                        entry.url==page.url %} aria-current="page" {% endif %}>
-                                        {{ entry.key }}
-                                    </a>
-                                    {% endif %}
+                            </li>
+                            <li class="cs-drop-li cs-drop3-main"><span class="cs-li-link cs-drop-link">🔬 Diagnostic
+                                    Services <img alt="dropdown icon"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg"
+                                        decoding="async" height="15" width="15" class="cs-drop-icon"
+                                        aria-hidden="true"></span>
+                                <ul class="cs-drop3">
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Digital X-Rays</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">EKG’s</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Lab Work</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">STD Testing</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Flu / Strep Testing</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Drug Testing</a></li>
+                                </ul>
+                            </li>
+                            <li class="cs-drop-li cs-drop3-main"><span class="cs-li-link cs-drop-link">🩺 Wellness
+                                    Services <img alt="dropdown icon"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg"
+                                        decoding="async" height="15" width="15" class="cs-drop-icon"
+                                        aria-hidden="true"></span>
+                                <ul class="cs-drop3">
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">IV Vitamin/Mineral
+                                            Therapies</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">IV Chelation</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Weight Loss / Detox
+                                            Programs</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Hormone Optimization</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Medical Marijuana
+                                            Evaluations</a></li>
+                                </ul>
+                            </li>
+                            <li class="cs-drop-li cs-drop3-main"><span class="cs-li-link cs-drop-link">🏢 Employer
+                                    Services <img alt="dropdown icon"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg"
+                                        decoding="async" height="15" width="15" class="cs-drop-icon"
+                                        aria-hidden="true"></span>
+                                <ul class="cs-drop3">
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Work Related Injury
+                                            Treatment</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Return to Work Evaluations</a>
+                                    </li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Fitness for Duty
+                                            Evaluations</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Worker’s Comp Case
+                                            Management</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Subspecialty Referrals</a>
+                                    </li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Light Duty Program
+                                            Development</a></li>
+                                </ul>
+                            </li>
+                            <li class="cs-drop-li cs-drop3-main"><span class="cs-li-link cs-drop-link">Additional
+                                    Services <img alt="dropdown icon"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg"
+                                        decoding="async" height="15" width="15" class="cs-drop-icon"
+                                        aria-hidden="true"></span>
+                                <ul class="cs-drop3">
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Immigration Exam</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Pre-operative Clearance</a>
+                                    </li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Employment Physicals</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Specialist Referrals</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Hormone Optimization</a></li>
+                                    <li class="cs-drop-li3"><a href="/services"
+                                            class="cs-li-link cs-drop-link cs-drop-link3">Medical Marijuana
+                                            Evaluations</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
-                    {% endfor %}
+                    <li class="cs-li"><a href="/about" class="cs-li-link">About Us</a></li>
+                    <li class="cs-li"><a href="/know-before-you-go" class="cs-li-link">Photos</a></li>
+                    <li class="cs-li"><a href="/contact" class="cs-li-link">Contact</a></li>
                 </ul>
-                <div class="cs-call">
-
-
-                    <a class="mobile-link mobile-link1" style="background-color: var(--primary);" href="sms:{{client.phoneForTel}}">Send us a
-                        text</a>
-
-                    <a class="mobile-link mobile-link2" href="tel:{{client.phoneForTel}}">Give us a call</a>
-                </div>
+                <div class="cs-call"><a href="tel:(313) 395-2865" class="mobile-link mobile-link1"
+                        style="background-color:var(--primary);color:#fff">Call Now To Schedule</a> <a
+                        href="tel:(313) 395-2865" class="mobile-link mobile-link2">313.395.2865</a></div>
             </div>
         </nav>
         <a href="" class="cs-button-solid cs-nav-button">Get A Free Quote</a>
