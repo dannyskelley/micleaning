@@ -10,9 +10,9 @@
 @media only screen and (min-width: 0em) {
   :root {
     --primaryLight: #679CD5;
-    --primary: #bc3731;
+    --primary: #fed71a;
     --primaryDark: black;
-    --headerScroll: white;
+    --headerScroll: black;
     --mobileNav: black;
     --callBg: black;
     --secondary:#006dc9;
@@ -75,12 +75,11 @@
     border: 1px solid white;
     padding: 20px 30px;
     text-decoration: none;
-    border-radius: 9px;
     font-family: "Poppins";
     font-size: 1rem;
     line-height: 22px;
     font-weight: bold;
-    color: white;
+    color: black;
     text-align: center;
   }
   .cs-button-solid:hover {
@@ -161,6 +160,13 @@
     top: 0;
     left: 0;
     opacity: 0;
+  }
+  @font-face {
+    font-style: normal;
+    font-family: "Cinzel";
+    font-weight: 500;
+    font-display: swap;
+    src: local(""), url("/assets/fonts/cinzel-v23-latin-regular.woff2") format("woff2"), url("/assets/fonts/cinzel-v23-latin-regular.woff2") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
   @font-face {
     font-style: normal;
