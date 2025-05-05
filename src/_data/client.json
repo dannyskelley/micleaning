@@ -3,7 +3,7 @@
     "service": "Roofing",
     "email": "info@designgandalf.com",
     "phoneForTel": "989-845-2333",
-    "phoneFormatted": "989-845-2333",
+    "phoneFormatted": "989.845.2333",
     "serviceAreas": {
         "areaOne": "Daytona, FL",
         "areaTwo": "Port Orange, FL"

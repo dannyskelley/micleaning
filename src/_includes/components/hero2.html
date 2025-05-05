@@ -93,7 +93,7 @@
     /* top changes to 100px on tablet */
     /* bottom 60px - 180px */
     padding: 1.5rem 2rem clamp(3.75rem, 12vw, 11.25rem);
-    padding-top: 230px;
+
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -120,7 +120,7 @@
   }
   #hero-2219 .cs-title {
     /* 49px - 61px */
-    font-size: clamp(1.1625rem, 6vw, 3.8125rem);
+    font-size: clamp(1.1625rem, 3vw, 3.8125rem);
 
     color: var(--bodyTextColorWhite);
   }
@@ -193,7 +193,7 @@
   }
   #hero-2219 .cs-background {
     width: 100%;
-    height: 99vh;
+    height: 100vh;
     min-height: 750px;
     position: absolute;
     top: 0;
@@ -212,11 +212,12 @@
   #hero-2219 .cs-background::before {
     content: "";
     width: 100%;
-    height: 100vh;
+    height: 150vh;
     background: linear-gradient(0deg,#000 45%,rgba(0,0,0,0) 58.94%,rgba(0,0,0,.5) 96.68%);
 opacity: .5;
     position: absolute;
     top: 0;
+    bottom:0px;
     left: 0;
     z-index: 9999;
   }
@@ -289,7 +290,7 @@ right: 0px;
     box-sizing: content-box;
     /* 16px - 170px */
     margin: 0px 0px;
-    padding-top: 130px;
+
     max-width: 900px;
     
   }
@@ -353,7 +354,7 @@ right: 30px;
             
             Premium, precision driven handyman work for homeowners who expect it done right the first time. No shortcuts, no excuses.
             </p>
-          <a style="margin-top: 30px;" href="tel:{{client.phoneForTel}}" class="cs-button-solid">Hire the best first</a>
+          <a style="margin-top: 30px;" href="tel:{{client.phoneForTel}}" class="cs-button-solid">Call Now - {{client.phoneFormatted}}</a>
            
 
       

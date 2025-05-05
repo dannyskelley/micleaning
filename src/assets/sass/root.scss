@@ -16,7 +16,7 @@
         --headerScroll: black;
         --mobileNav: black;
         --callBg: black;
-        --secondary:#006dc9;
+        --secondary:#666;
         --secondaryLight: #001f3f;
         --headerColor: #1a1a1a;
         --bodyTextColor: rgba(0,0,0,.8);
@@ -28,7 +28,7 @@
         --navLinkActive:  white ;
 
         /* 13px - 16px */
-        --topperFontSize: clamp(.9rem, 1.6vw, 1rem);
+        --topperFontSize: clamp(.9rem, 1.6vw, 1.5rem);
         /* 31px - 49px */
         --headerFontSize: clamp(2.5375rem, 3.9vw, 3.0625rem);
         --bodyFontSize: 1.4rem;
@@ -96,7 +96,7 @@
         text-align: center;
 
         &:hover {
-            color: black;
+            color: white;
             &:before {
                 width: 100%;
                 opacity: 1;
@@ -112,12 +112,11 @@
             content: "";
             opacity: 1;
             display: block;
-            background-color: #fff;
+            background-color: black;
             height: 100%;
             border:2px solid black;
             opacity: 0;
-            border-radius: 999px;
-
+           
             //Transition properties
             width: 0;
             transition: width 0.1s;
