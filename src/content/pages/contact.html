@@ -1,6 +1,8 @@
 ---
 title: 'Chesaning Inn & Suites | Comfortable, Affordable Stays in Chesaning, MI'
-description: 'Sleep easy and stay happy at Chesaning Inn & Suites — a family-owned hotel welcoming guests for over 20 years. Located in the heart of Chesaning, MI, we offer free WiFi, pet-friendly rooms, and special options like cozy fireplaces or relaxing Jacuzzi tubs. Ask about our affordable weekly rates!'
+description: 'Sleep easy and stay happy at Chesaning Inn & Suites — a family-owned hotel welcoming guests for over 20
+years. Located in the heart of Chesaning, MI, we offer free WiFi, pet-friendly rooms, and special options like cozy
+fireplaces or relaxing Jacuzzi tubs. Ask about our affordable weekly rates!'
 permalink: 'contact/'
 eleventyNavigation:
 key: Contact Us
@@ -14,7 +16,7 @@ order: 500
 {% endblock %}
 
 {% block body %}
-
+{% include 'components/header_contact.html' %}
 <!-- ============================================ -->
 <!--                Contact Form                  -->
 <!-- ============================================ -->
@@ -220,10 +222,17 @@ order: 500
     <!-- Contact Info -->
     <div class="cs-content">
 
-      <h2 class="cs-title">Contact Us</h2>
-      <span class="cs-topper">Your Comfort is Just a Call Away</span>
-      <span class="cs-text" style="margin-top: 50px;">Need more information or assistance with booking your stay? Whether you have questions about our rooms, amenities, or anything else, we’re here to help. At Chesaning Inn, your comfort and satisfaction are our top priorities.
-      </span>
+      <!-- Contact Page Content -->
+      <section class="contact-section">
+        <h2 class="cs-title">Handyman Services in Oakland, Genesee, Lapeer & Saginaw
+          Counties.</h2>
+        <p class="cs-text" style="color:#666">
+          <strong>Top Rated. Veteran Owned. </strong><br><br>
+          Have questions about your next home repair or improvement project? We're here to help. At Great Lakes Handyman
+          Services, we deliver premium, precision driven work for homeowners who expect it done right the first time. No
+          shortcuts, no excuses. Reach out today and let’s get it taken care of.
+        </p>
+      </section> </span>
       <!--<p class="cs-text">
                 Justo eget magna fermentum iaculis eu non diam phasellus vestibulum. Eu volutpat odio facilisis mauris sit amet massa. Sit amet est placerat in egestas
             </p>-->
