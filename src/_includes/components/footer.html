@@ -211,7 +211,7 @@
   height: auto;
   object-fit: cover;
   position: absolute;
-  top: 0rem;
+ bottom: -1000px;
   left: 50%;
   z-index: -1;
   transform: translateX(-50%);
@@ -262,6 +262,18 @@
 }
 /* Tablet - 600px */
 @media only screen and (min-width: 37.5rem) {
+  #cs-footer-1763 .cs-graphic {
+  width:200%;
+  min-width: 120rem;
+  height: auto;
+  object-fit: cover;
+  position: absolute;
+  bottom: -1000px;
+  left: 50%;
+  z-index: -1;
+  transform: translateX(-50%);
+  opacity: .015;
+}
 #cs-footer-1763 .cs-card-group {
   max-width: 80rem;
 }
@@ -339,6 +351,22 @@
 /* Enhanced columns for desktop */
 #cs-footer-1763 .cs-services-grid {
   grid-template-columns: repeat(4, 1fr);
+}
+}
+
+/* Tablet - 600px */
+@media only screen and (min-width: 1000px) {
+  #cs-footer-1763 .cs-graphic {
+  width:200%;
+  min-width: 120rem;
+  height: auto;
+  object-fit: cover;
+  position: absolute;
+  bottom: -2000px;
+  left: 50%;
+  z-index: -1;
+  transform: translateX(-50%);
+  opacity: .015;
 }
 }
                               
