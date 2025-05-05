@@ -1,0 +1,54 @@
+---
+title: 'Chesaning Inn & Suites | Affordable, Pet-Friendly Hotel in Chesaning, MI'
+description: 'Welcome to Chesaning Inn & Suites — family owned for 20+ years. Enjoy free WiFi, pet-friendly stays, and fireplace or Jacuzzi rooms. Book direct for the best rates!'
+permalink: '/'
+eleventyNavigation:
+  key: Home
+  order: 100
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/local.css" />
+    <link rel="stylesheet" href="/assets/css/critical.css" />
+
+  
+    <!-- Script for Netlify Identity -->
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script defer>
+        if (window.netlifyIdentity) {
+            window
+                .netlifyIdentity
+                .on('init', (user) => {
+                    if (!user) {
+                        window
+                            .netlifyIdentity
+                            .on('login', () => {
+                                document.location.href = '/admin/';
+                            });
+                    }
+                });
+        }
+    </script>
+
+{% endblock %}
+
+{% block body %}
+
+
+   
+{% include 'components/hero2.html' %}
+
+
+{% include 'components/herostats.html' %}
+
+{% include 'components/2.html' %}
+{% include 'components/3.html' %}
+{% include 'components/steps.html' %}
+{% include 'components/faq.html' %}
+{% include 'components/testimonial.html' %}
+{% include 'components/cta.html' %}
+
+
+    {% endblock %}
